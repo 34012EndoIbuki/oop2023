@@ -13,9 +13,9 @@ namespace WindowsFromApp1 {
         static void Main() 
         {
             Application.EnableVisualStyles();
-            Application
+            Application.SetCompetibleTextRenderingDefault(false);
+            Application.Run(new Form1());
 
         }
-        
     }
 }

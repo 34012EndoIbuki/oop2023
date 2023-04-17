@@ -14,14 +14,13 @@ namespace WindowsFromApp1 {
             InitializeComponent();
         }
 
-        private void Button1_Click(object sender, EventArgs e) {
-            int ans = int.Parse(tbNum.Text) + int.Parse(tbNum2.Text);
-            tbAns.Text = ans.ToString();
-
-        }
-
-        private void From1_Load(object sender, EventArgs e) {
-
+        private void btButton_Click(object sender, EventArgs e) {
+            //int ans = int.Parse(tbNum.Text) + int.Parse(tbNum2.Text);
+            //tbAns.Text = ans.ToString();
+            int num1 = int.Parse(tbNum1.Text);
+            int num2 = int.Parse(tbNum2.Text);
+            int sum = num1 + num2;
+            tbAns.Text = sum.ToString();
         }
     }
 }

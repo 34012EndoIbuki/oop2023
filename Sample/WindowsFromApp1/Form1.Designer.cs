@@ -25,31 +25,31 @@ namespace WindowsFromApp1 {
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            this.button1 = new System.Windows.Forms.Button();
-            this.tbNum = new System.Windows.Forms.TextBox();
+            this.btButton = new System.Windows.Forms.Button();
+            this.tbNum1 = new System.Windows.Forms.TextBox();
             this.tbNum2 = new System.Windows.Forms.TextBox();
             this.tbAns = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // button1
+            // btButton
             // 
-            this.button1.Location = new System.Drawing.Point(329, 230);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(142, 79);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "計算";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            this.btButton.Location = new System.Drawing.Point(329, 230);
+            this.btButton.Name = "btButton";
+            this.btButton.Size = new System.Drawing.Size(142, 79);
+            this.btButton.TabIndex = 0;
+            this.btButton.Text = "計算";
+            this.btButton.UseVisualStyleBackColor = true;
+            this.btButton.Click += new System.EventHandler(this.Button1_Click);
             // 
-            // tbNum
+            // tbNum1
             // 
-            this.tbNum.Location = new System.Drawing.Point(12, 28);
-            this.tbNum.Multiline = true;
-            this.tbNum.Name = "tbNum";
-            this.tbNum.Size = new System.Drawing.Size(203, 49);
-            this.tbNum.TabIndex = 1;
+            this.tbNum1.Location = new System.Drawing.Point(12, 28);
+            this.tbNum1.Multiline = true;
+            this.tbNum1.Name = "tbNum1";
+            this.tbNum1.Size = new System.Drawing.Size(203, 49);
+            this.tbNum1.TabIndex = 1;
             // 
             // tbNum2
             // 
@@ -96,11 +96,10 @@ namespace WindowsFromApp1 {
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tbNum2);
             this.Controls.Add(this.tbAns);
-            this.Controls.Add(this.tbNum);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.tbNum1);
+            this.Controls.Add(this.btButton);
             this.Name = "From1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.From1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -108,8 +107,8 @@ namespace WindowsFromApp1 {
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox tbNum;
+        private System.Windows.Forms.Button btButton;
+        private System.Windows.Forms.TextBox tbNum1;
         private System.Windows.Forms.TextBox tbNum2;
         private System.Windows.Forms.TextBox tbAns;
         private System.Windows.Forms.Label label1;
