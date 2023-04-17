@@ -41,7 +41,7 @@ namespace WindowsFromApp1 {
             this.btButton.TabIndex = 0;
             this.btButton.Text = "計算";
             this.btButton.UseVisualStyleBackColor = true;
-            this.btButton.Click += new System.EventHandler(this.Button1_Click);
+            this.btButton.Click += new System.EventHandler(this.btButton_Click);
             // 
             // tbNum1
             // 
