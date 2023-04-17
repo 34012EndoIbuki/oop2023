@@ -32,14 +32,14 @@ namespace WindowsFromApp0412 {
             this.btAns = new System.Windows.Forms.Button();
             this.tbAns = new System.Windows.Forms.TextBox();
             this.nubX = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.nubY = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbResult = new System.Windows.Forms.TextBox();
             this.btPow = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nubX)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nubY)).BeginInit();
             this.SuspendLayout();
             // 
             // tbNum1
@@ -105,13 +105,13 @@ namespace WindowsFromApp0412 {
             this.nubX.Size = new System.Drawing.Size(100, 34);
             this.nubX.TabIndex = 4;
             // 
-            // numericUpDown1
+            // nubY
             // 
-            this.numericUpDown1.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.numericUpDown1.Location = new System.Drawing.Point(203, 130);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(100, 34);
-            this.numericUpDown1.TabIndex = 4;
+            this.nubY.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.nubY.Location = new System.Drawing.Point(203, 130);
+            this.nubY.Name = "nubY";
+            this.nubY.Size = new System.Drawing.Size(100, 34);
+            this.nubY.TabIndex = 4;
             // 
             // label3
             // 
@@ -133,13 +133,13 @@ namespace WindowsFromApp0412 {
             this.label4.TabIndex = 1;
             this.label4.Text = "乗は";
             // 
-            // textBox1
+            // tbResult
             // 
-            this.textBox1.Location = new System.Drawing.Point(412, 122);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 42);
-            this.textBox1.TabIndex = 0;
+            this.tbResult.Location = new System.Drawing.Point(412, 122);
+            this.tbResult.Multiline = true;
+            this.tbResult.Name = "tbResult";
+            this.tbResult.Size = new System.Drawing.Size(100, 42);
+            this.tbResult.TabIndex = 0;
             // 
             // btPow
             // 
@@ -167,7 +167,7 @@ namespace WindowsFromApp0412 {
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.nubY);
             this.Controls.Add(this.nubX);
             this.Controls.Add(this.btPow);
             this.Controls.Add(this.btAns);
@@ -176,14 +176,14 @@ namespace WindowsFromApp0412 {
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbResult);
             this.Controls.Add(this.tbAns);
             this.Controls.Add(this.tbNum2);
             this.Controls.Add(this.tbNum1);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.nubX)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nubY)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -198,10 +198,10 @@ namespace WindowsFromApp0412 {
         private System.Windows.Forms.Button btAns;
         private System.Windows.Forms.TextBox tbAns;
         private System.Windows.Forms.NumericUpDown nubX;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown nubY;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbResult;
         private System.Windows.Forms.Button btPow;
         private System.Windows.Forms.Label label5;
     }

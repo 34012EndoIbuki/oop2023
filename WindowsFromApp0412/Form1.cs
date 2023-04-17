@@ -22,7 +22,8 @@ namespace WindowsFromApp0412 {
         }
 
         private void btPow_Click(object sender, EventArgs e) {
-            int num3 = int.Parse(nubX.Text);
+            double result = Math.Pow((double)nubX.Value, (double)nubY.Value);
+            tbResult.Text = result.ToString();
         }
     }
 }
