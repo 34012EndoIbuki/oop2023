@@ -6,10 +6,10 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace BallApp {
-    class SoccerBall : Obj {
+    class TennisBall : Obj {    //Objを継承
 
         //フィールド
-        
+
         private static int count; //インスタンスの個数　サッカーボールの数
 
         Random random = new Random();   //乱数インスタンス
@@ -19,8 +19,8 @@ namespace BallApp {
 
 
         //コンストラクタ
-        public SoccerBall(double xp, double yp)
-            :base(xp,yp, @"pic\soccer_ball.png") {
+        public TennisBall (double xp, double yp)
+            :base(xp, yp, @"pic\tennis_ball.png") {
 
             int rndX = random.Next(-25, 25);
             MoveX = (rndX != 0 ? rndX : 1); //乱数で移動量を設定
@@ -31,22 +31,24 @@ namespace BallApp {
             Count++;
         }
 
-        //メソッド
+        //抽象クラスの実装
         public override void Move() {
+            //throw new NotImplementedException();
 
             Console.WriteLine("Ｘ座標 = {0}, Ｙ座標 = {1}", PosX, PosY);
 
-            if (PosY > 520 || PosY < 0)
+            if (PosY > 600 || PosY < 0)
             {
                 MoveY = -MoveY;
             }
 
-            if (PosX > 730 || PosX < 0)
+            if (PosX > 800 || PosX < 0)
             {
                 MoveX = -MoveX;
             }
             PosX += MoveX;
             PosY += MoveY;
-        }
+        
+         }
     }
 }
