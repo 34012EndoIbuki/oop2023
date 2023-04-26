@@ -51,5 +51,6 @@ namespace BallApp {
             PosX += MoveX;
             PosY += MoveY;
         }
+
     }
 }
