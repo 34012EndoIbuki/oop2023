@@ -124,7 +124,7 @@ namespace BallApp {
 
             for (int i = 0; i < obj.Count; i++)
             {
-                obj[i].Move();  //移動
+                obj[i].Move(pbBar,pbs[i]);  //移動
                 pbs[i].Location = new Point((int)obj[i].PosX, (int)obj[i].PosY); //画像の位置
             }
         }
