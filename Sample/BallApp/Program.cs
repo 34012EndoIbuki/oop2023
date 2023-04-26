@@ -48,7 +48,7 @@ namespace BallApp {
             balls.Add(soccerBall);
             pbs.Add(pb);
 
-            this.Text = "BallGame soccerball" + SoccerBall.counter +"tennisball"+ TennisBall.counter;
+            this.Text = "BallGame soccerball" + SoccerBall.Count +"tennisball"+ TennisBall.Count;
 
             moveTimer.Start();  //タイマースタート
         }
