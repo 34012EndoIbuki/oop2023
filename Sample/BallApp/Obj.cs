@@ -31,6 +31,6 @@ namespace BallApp {
 
         //移動メソッド（抽象メソッド）
         public abstract void Move();
-        internal abstract void Add(Obj ballObj);
+       
     }
 }

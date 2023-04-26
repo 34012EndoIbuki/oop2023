@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace BallApp {
     class SoccerBall : Obj {
 
@@ -17,6 +18,8 @@ namespace BallApp {
         //プロパティ
         public static int Count { get => count; set => count = value; }
 
+//        private static int counter;
+//        public static int Counter { get => counter; set => counter = value; }
 
         //コンストラクタ
         public SoccerBall(double xp, double yp)
