@@ -1,0 +1,7 @@
+C:\Users\infosys\source\repos\oop2023\Sample\ConsoleApp223\bin\Debug\ConsoleApp223.exe.config
+C:\Users\infosys\source\repos\oop2023\Sample\ConsoleApp223\bin\Debug\ConsoleApp223.exe
+C:\Users\infosys\source\repos\oop2023\Sample\ConsoleApp223\bin\Debug\ConsoleApp223.pdb
+C:\Users\infosys\source\repos\oop2023\Sample\ConsoleApp223\obj\Debug\ConsoleApp0411.csproj.CoreCompileInputs.cache
+C:\Users\infosys\source\repos\oop2023\Sample\ConsoleApp223\obj\Debug\ConsoleApp223.exe
+C:\Users\infosys\source\repos\oop2023\Sample\ConsoleApp223\obj\Debug\ConsoleApp223.pdb
+C:\Users\infosys\source\repos\oop2023\Sample\ConsoleApp223\obj\Debug\ConsoleApp0411.csproj.AssemblyReference.cache

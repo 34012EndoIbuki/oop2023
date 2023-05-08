@@ -1,0 +1,9 @@
+C:\Users\infosys\source\repos\oop2023\Sample\WindowsFromApp1\bin\Debug\WindowsFromApp1.exe.config
+C:\Users\infosys\source\repos\oop2023\Sample\WindowsFromApp1\bin\Debug\WindowsFromApp1.exe
+C:\Users\infosys\source\repos\oop2023\Sample\WindowsFromApp1\bin\Debug\WindowsFromApp1.pdb
+C:\Users\infosys\source\repos\oop2023\Sample\WindowsFromApp1\obj\Debug\WindowsFromApp1.csproj.AssemblyReference.cache
+C:\Users\infosys\source\repos\oop2023\Sample\WindowsFromApp1\obj\Debug\WindowsFromApp1.csproj.GenerateResource.cache
+C:\Users\infosys\source\repos\oop2023\Sample\WindowsFromApp1\obj\Debug\WindowsFromApp1.csproj.CoreCompileInputs.cache
+C:\Users\infosys\source\repos\oop2023\Sample\WindowsFromApp1\obj\Debug\WindowsFromApp1.exe
+C:\Users\infosys\source\repos\oop2023\Sample\WindowsFromApp1\obj\Debug\WindowsFromApp1.pdb
+C:\Users\infosys\source\repos\oop2023\Sample\WindowsFromApp1\obj\Debug\WindowsFromApp1.From1.resources

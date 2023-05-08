@@ -1,0 +1,10 @@
+C:\Users\infosys\source\repos\OOP2023\Sample\BallApp\bin\Debug\BallApp.exe.config
+C:\Users\infosys\source\repos\OOP2023\Sample\BallApp\bin\Debug\BallApp.exe
+C:\Users\infosys\source\repos\OOP2023\Sample\BallApp\bin\Debug\BallApp.pdb
+C:\Users\infosys\source\repos\OOP2023\Sample\BallApp\obj\Debug\BallApp.csproj.AssemblyReference.cache
+C:\Users\infosys\source\repos\OOP2023\Sample\BallApp\obj\Debug\BallApp.csproj.CoreCompileInputs.cache
+C:\Users\infosys\source\repos\OOP2023\Sample\BallApp\obj\Debug\BallApp.exe
+C:\Users\infosys\source\repos\OOP2023\Sample\BallApp\obj\Debug\BallApp.pdb
+C:\Users\infosys\source\repos\OOP2023\Sample\BallApp\bin\Debug\pic\soccer_ball.png
+C:\Users\infosys\source\repos\OOP2023\Sample\BallApp\bin\Debug\pic\tennis_ball.png
+C:\Users\infosys\source\repos\oop2023\Sample\BallApp\bin\Debug\pic\bar.png

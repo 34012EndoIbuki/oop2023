@@ -1,0 +1,9 @@
+C:\Users\infosys\source\repos\oop2023\WindowsFromApp0412\bin\Debug\WindowsFromApp0412.exe.config
+C:\Users\infosys\source\repos\oop2023\WindowsFromApp0412\bin\Debug\WindowsFromApp0412.exe
+C:\Users\infosys\source\repos\oop2023\WindowsFromApp0412\bin\Debug\WindowsFromApp0412.pdb
+C:\Users\infosys\source\repos\oop2023\WindowsFromApp0412\obj\Debug\WindowsFromApp0412.csproj.AssemblyReference.cache
+C:\Users\infosys\source\repos\oop2023\WindowsFromApp0412\obj\Debug\WindowsFromApp0412.Form1.resources
+C:\Users\infosys\source\repos\oop2023\WindowsFromApp0412\obj\Debug\WindowsFromApp0412.csproj.GenerateResource.cache
+C:\Users\infosys\source\repos\oop2023\WindowsFromApp0412\obj\Debug\WindowsFromApp0412.csproj.CoreCompileInputs.cache
+C:\Users\infosys\source\repos\oop2023\WindowsFromApp0412\obj\Debug\WindowsFromApp0412.exe
+C:\Users\infosys\source\repos\oop2023\WindowsFromApp0412\obj\Debug\WindowsFromApp0412.pdb
