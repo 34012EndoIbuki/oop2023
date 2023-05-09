@@ -18,16 +18,17 @@ namespace ProductSample {
             //Console.WriteLine("税込み価格:" + daifuku.GetPriceIncludingTax());
             #endregion
 
-            #region 
+            #region 演習1
+
             //DateTime date = new DateTime(2023, 5, 8);
-            DateTime datee = DateTime.Today;
+            DateTime date = DateTime.Today;
 
             //10日後を求める
-            DateTime daysAfter10 = datee.AddDays(10);
+            DateTime daysAfter10 = date.AddDays(10);
             Console.WriteLine("今日の10日後は" + daysAfter10 + "日です");
 
             //10日前を求める
-            DateTime daysBefore10 = datee.AddDays(-10);
+            DateTime daysBefore10 = date.AddDays(-10);
             Console.WriteLine("今日の10日前は" + daysBefore10 + "日です");
 
             /* 
@@ -35,8 +36,9 @@ namespace ProductSample {
              */
             #endregion
 
+            #region 演習2
             DateTime now = DateTime.Now;
-            int date = now.Day;
+            int day = now.Day;
             int month = now.Month;
             int year = now.Year;
 
@@ -50,12 +52,44 @@ namespace ProductSample {
             int bdDay = int.Parse(Console.ReadLine());
 
             DateTime mybd = new DateTime(bdYear, bdMonth,bdDay);
-            DateTime nowDate = new DateTime(year, month, date);
+            DateTime nowDate = new DateTime(year, month, day);
 
 
             TimeSpan total = nowDate - mybd;
 
             Console.WriteLine("あなたは生まれてから今日で"　+ total.Days + "日目です");
+            #endregion
+
+            #region 演習3
+            DayOfWeek dow = mybd.DayOfWeek;
+            //Console.WriteLine(dow);
+            switch (dow)
+            {
+                case DayOfWeek.Sunday:
+                    Console.WriteLine("あなたは日曜日生まれです");
+                    break;
+                case DayOfWeek.Monday:
+                    Console.WriteLine("あなたは月曜日生まれです");
+                    break;
+                case DayOfWeek.Tuesday:
+                    Console.WriteLine("あなたは火曜日生まれです");
+                    break;
+                case DayOfWeek.Wednesday:
+                    Console.WriteLine("あなたは水曜日生まれです");
+                    break;
+                case DayOfWeek.Thursday:
+                    Console.WriteLine("あなたは木曜日生まれです");
+                    break;
+                case DayOfWeek.Friday:
+                    Console.WriteLine("あなたは金曜日生まれです");
+                    break;
+                case DayOfWeek.Saturday:
+                    Console.WriteLine("あなたは土曜日生まれです");
+                   
+                    break;
+            }
+
+            #endregion
 
         }
     }
