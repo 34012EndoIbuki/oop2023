@@ -40,19 +40,22 @@ namespace ProductSample {
             int month = now.Month;
             int year = now.Year;
 
+
             Console.WriteLine("誕生日を入力");
-            Console.WriteLine("西暦:");
-            String bdYear = Console.ReadLine();
-            Console.WriteLine("月:");
-            String bdMonth = Console.ReadLine();
-            Console.WriteLine("日:");
-            String bdDay = Console.ReadLine();
+            Console.Write("西暦:");
+            int bdYear = int.Parse(Console.ReadLine());
+            Console.Write("月:");
+            int bdMonth = int.Parse(Console.ReadLine());
+            Console.Write("日:");
+            int bdDay = int.Parse(Console.ReadLine());
+
+            DateTime mybd = new DateTime(bdYear, bdMonth,bdDay);
+            DateTime nowDate = new DateTime(year, month, date);
 
 
+            TimeSpan total = nowDate - mybd;
 
-
-
-            Console.WriteLine("あなたは生まれてから今日で"　+ "日目です");
+            Console.WriteLine("あなたは生まれてから今日で"　+ total.Days + "日目です");
 
         }
     }
