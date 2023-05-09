@@ -63,6 +63,7 @@ namespace ProductSample {
             #region 演習3
             DayOfWeek dow = mybd.DayOfWeek;
             //Console.WriteLine(dow);
+
             switch (dow)
             {
                 case DayOfWeek.Sunday:
@@ -89,6 +90,12 @@ namespace ProductSample {
                     break;
             }
 
+            /* 内山先生
+            String[] DayOfWeeks = { "日曜日", "月曜日", "火曜日", "水曜日", "木曜日", "金曜日", "土曜日", };
+
+            Console.WriteLine("あなたは生まれてから今日で{0}日目です。", total.Days);
+            Console.WriteLine("あなたは{0}生まれです。",DayOfWeeks);
+            */
             #endregion
 
         }
