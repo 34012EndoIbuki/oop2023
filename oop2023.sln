@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp0411_1", "Console
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFromApp1", "Sample\WindowsFromApp1\WindowsFromApp1.csproj", "{8556AA62-36DF-46F6-BE89-E2735AEFC992}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFromApp0412", "WindowsFromApp0412\WindowsFromApp0412.csproj", "{142EB7D7-72E6-4E9D-AF6C-974DD3023609}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFromApp0412", "Sample\WindowsFromApp0412\WindowsFromApp0412.csproj", "{142EB7D7-72E6-4E9D-AF6C-974DD3023609}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BallApp", "Sample\BallApp\BallApp.csproj", "{6E12030E-606E-4949-BFAC-5A5A1F94E75E}"
 EndProject
