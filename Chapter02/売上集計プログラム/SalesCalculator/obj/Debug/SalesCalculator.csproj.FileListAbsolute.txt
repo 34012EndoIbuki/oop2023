@@ -1,0 +1,6 @@
+C:\Users\infosys\source\repos\oop2023\Chapter02\売上集計プログラム\SalesCalculator\bin\Debug\SalesCalculator.exe.config
+C:\Users\infosys\source\repos\oop2023\Chapter02\売上集計プログラム\SalesCalculator\bin\Debug\SalesCalculator.exe
+C:\Users\infosys\source\repos\oop2023\Chapter02\売上集計プログラム\SalesCalculator\bin\Debug\SalesCalculator.pdb
+C:\Users\infosys\source\repos\oop2023\Chapter02\売上集計プログラム\SalesCalculator\obj\Debug\SalesCalculator.csproj.CoreCompileInputs.cache
+C:\Users\infosys\source\repos\oop2023\Chapter02\売上集計プログラム\SalesCalculator\obj\Debug\SalesCalculator.exe
+C:\Users\infosys\source\repos\oop2023\Chapter02\売上集計プログラム\SalesCalculator\obj\Debug\SalesCalculator.pdb
