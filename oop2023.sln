@@ -19,6 +19,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Chapter01", "Chapter01", "{
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductSample", "Chapter01\Product\ProductSample.csproj", "{99DEFE96-5AC5-42B7-A6EE-4F716CE2E28E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "chaoter02", "chaoter02", "{28168020-6B32-4252-920A-9ABC40491591}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "距離換算プログラム", "距離換算プログラム", "{A28B7999-C870-4F70-A3AF-65B31B93EC3C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DistanceConverter", "Chapter02\距離換算プログラム\DistanceConverter\DistanceConverter.csproj", "{51A6E7D8-1CE9-4910-8E9F-77178611BDB0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +55,10 @@ Global
 		{99DEFE96-5AC5-42B7-A6EE-4F716CE2E28E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{99DEFE96-5AC5-42B7-A6EE-4F716CE2E28E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{99DEFE96-5AC5-42B7-A6EE-4F716CE2E28E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51A6E7D8-1CE9-4910-8E9F-77178611BDB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51A6E7D8-1CE9-4910-8E9F-77178611BDB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51A6E7D8-1CE9-4910-8E9F-77178611BDB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51A6E7D8-1CE9-4910-8E9F-77178611BDB0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -60,6 +70,8 @@ Global
 		{142EB7D7-72E6-4E9D-AF6C-974DD3023609} = {9E0C7835-3C4F-4770-ABE0-295B78C3AF3F}
 		{6E12030E-606E-4949-BFAC-5A5A1F94E75E} = {9E0C7835-3C4F-4770-ABE0-295B78C3AF3F}
 		{99DEFE96-5AC5-42B7-A6EE-4F716CE2E28E} = {20F3C67B-2833-48A7-8B7E-B33E4BBFA198}
+		{A28B7999-C870-4F70-A3AF-65B31B93EC3C} = {28168020-6B32-4252-920A-9ABC40491591}
+		{51A6E7D8-1CE9-4910-8E9F-77178611BDB0} = {A28B7999-C870-4F70-A3AF-65B31B93EC3C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {612E75FA-EA71-4D4F-A972-98EDDEA28886}

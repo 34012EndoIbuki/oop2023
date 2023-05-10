@@ -1,0 +1,7 @@
+C:\Users\infosys\source\repos\OOP2023\Chapter02\距離換算プログラム\DistanceConverter\bin\Debug\DistanceConverter.exe.config
+C:\Users\infosys\source\repos\OOP2023\Chapter02\距離換算プログラム\DistanceConverter\bin\Debug\DistanceConverter.exe
+C:\Users\infosys\source\repos\OOP2023\Chapter02\距離換算プログラム\DistanceConverter\bin\Debug\DistanceConverter.pdb
+C:\Users\infosys\source\repos\OOP2023\Chapter02\距離換算プログラム\DistanceConverter\obj\Debug\DistanceConverter.csproj.AssemblyReference.cache
+C:\Users\infosys\source\repos\OOP2023\Chapter02\距離換算プログラム\DistanceConverter\obj\Debug\DistanceConverter.csproj.CoreCompileInputs.cache
+C:\Users\infosys\source\repos\OOP2023\Chapter02\距離換算プログラム\DistanceConverter\obj\Debug\DistanceConverter.exe
+C:\Users\infosys\source\repos\OOP2023\Chapter02\距離換算プログラム\DistanceConverter\obj\Debug\DistanceConverter.pdb
