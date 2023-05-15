@@ -8,7 +8,8 @@ using System.Threading.Tasks;
 namespace SalesCalculator {
     class Program {
         static void Main(string[] args) {
-            
+            List<Sale> sales = ReadSales();
+            SalesCounter sc = new SalesCounter(sales);
         }
 
         //売上データを読み込み、saleオブジェクトのリストを返す
