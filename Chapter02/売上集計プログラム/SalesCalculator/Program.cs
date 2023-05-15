@@ -8,8 +8,12 @@ using System.Threading.Tasks;
 namespace SalesCalculator {
     class Program {
         static void Main(string[] args) {
-            List<Sale> sales = ReadSales();
-            SalesCounter sc = new SalesCounter(sales);
+           
+            SalesCounter sales = new SalesCounter(ReadSales(@"data\sales.csv"));
+            Dictionary<string,int> amountPerStore = sales.GetPerStoreSales();
+            foreach (KeyValuePair<string,int> obj in amountPerStore) {
+                Console.WriteLine("{0} {1}", obj.Key, obj.Value);
+            }
         }
 
         //売上データを読み込み、saleオブジェクトのリストを返す
