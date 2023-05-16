@@ -10,17 +10,17 @@ namespace SalesCalculator {
 
 
 
-        private List<Sale> _sales;
+        private IEnumerable<Sale> _sales;
         //コンストラクタ
-        public SalesCounter(List<Sale> sales) {
-            _sales = sales;
+        public SalesCounter(string filePath) {
+            _sales = ReadSales(filePath);
 
         }
 
         //店舗別の売り上げを求める処理
-        public Dictionary<string, int> GetPerStoreSales() {
-            Dictionary<string, int> dict = new Dictionary<string, int>();
-            foreach(Sale sale in _sales) {
+        public IDictionary<string, int> GetPerStoreSales() {
+            SortedDictionary<string, int> dict = new SortedDictionary<string, int>();
+            foreach(var sale in _sales) {
                 if (dict.ContainsKey(sale.ShopName)) {
                     dict[sale.ShopName] += sale.Amount; //店名が存在する（売上換算）
                 } else {
@@ -31,13 +31,13 @@ namespace SalesCalculator {
         }
 
         //売上データを読み込み、saleオブジェクトのリストを返す
-        public static List<Sale> ReadSales(string filePath) {   //データ読みこみ
-            List<Sale> sales = new List<Sale>();    //売上データ格納
-            string[] lines = File.ReadAllLines(filePath);   //ファイルからすべてのデータを読み込む
+        private static IEnumerable<Sale> ReadSales(string filePath) {   //データ読みこみ
+            var sales = new List<Sale>();    //売上データ格納
+            var lines = File.ReadAllLines(filePath);   //ファイルからすべてのデータを読み込む
 
-            foreach (string line in lines) {    //すべての行から一行ずつ取り出す
-                string[] items = line.Split(',');   //,区切りでitemsにデータを格納　項目別に分ける
-                Sale sale = new Sale {  //saleインスタンスを生成
+            foreach (var line in lines) {    //すべての行から一行ずつ取り出す
+                var items = line.Split(',');   //,区切りでitemsにデータを格納　項目別に分ける
+                var sale = new Sale {  //saleインスタンスを生成
                     ShopName = items[0],
                     ProductCategory = items[1],
                     Amount = int.Parse(items[2])

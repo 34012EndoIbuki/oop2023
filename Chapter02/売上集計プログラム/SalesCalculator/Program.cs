@@ -9,10 +9,10 @@ namespace SalesCalculator {
     class Program {
         static void Main(string[] args) {
            
-            SalesCounter sales = new SalesCounter(SalesCounter.ReadSales(@"data\sales.csv"));
-            Dictionary<string,int> amountPerStore = sales.GetPerStoreSales();
+            SalesCounter sales = new SalesCounter(@"data\sales.csv");
+            IDictionary<string,int> amountPerStore = sales.GetPerStoreSales();
             foreach (KeyValuePair<string,int> obj in amountPerStore) {
-                Console.WriteLine("{0} {1}", obj.Key, obj.Value);
+                Console.WriteLine("{0} {1:C}", obj.Key, obj.Value);
             }
         }
     }
