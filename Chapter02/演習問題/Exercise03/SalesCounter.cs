@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SalesCalculator {
+namespace Exercise03 {
     class SalesCounter {
 
 
@@ -28,6 +28,18 @@ namespace SalesCalculator {
                 }                                        
             }
             return dict;
+        }
+
+        public IDictionary<string, int> GetPerStoreSale() {
+            SortedDictionary<string, int> dic = new SortedDictionary<string, int>();
+            foreach (var sale in _sales) {
+                if (dic.ContainsKey(sale.ProductCategory)) {
+                    dic[sale.ProductCategory] += sale.Amount; //店名が存在する（売上換算）
+                } else {
+                    dic[sale.ProductCategory] = sale.Amount;  //店名が存在しない（新規格納）
+                }
+            }
+            return dic;
         }
 
         //売上データを読み込み、saleオブジェクトのリストを返す
