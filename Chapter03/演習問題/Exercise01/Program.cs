@@ -41,13 +41,16 @@ namespace Exercise01 {
 
         private static void Exercise1_3(List<int> numbers) {
             var fifty = numbers.Where(s => s >= 50);
-            foreach (int s in fifty) {
-                Console.WriteLine(fifty);
+            foreach(int s in fifty) {
+                Console.WriteLine("{0}",s);
             }
         }
 
         private static void Exercise1_4(List<int> numbers) {
-            
+            var twice = numbers.Select(s => s * 2);
+            foreach(var s in twice) {
+                Console.WriteLine("{0}", s);
+            }
         }
     }
 }
