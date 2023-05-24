@@ -41,6 +41,7 @@ namespace Exercise02 {
 
         private static void Exercise2_3(List<string> names) {
             var lambda = names.Where(s => s.Contains("o")).Select(s => s);
+            //var selected = names.Where(s => s.Contains('o').ToArry(); 先生
             foreach(var s in lambda) {
                 Console.WriteLine(s);
             }
@@ -48,10 +49,14 @@ namespace Exercise02 {
 
         private static void Exercise2_4(List<string> names) {
             var name = names.Where(s => s.StartsWith("B")).Select(s => s.Length);
+            //var selected = names.Where(s => s.StartWith('B')).Select(s => new{s,s.Length}).ToArray();
             
             foreach (var s in name) {
                 Console.WriteLine(s);
             }
+            /*foreach (var item in selected) {
+                Console.WriteLine("{0}", "{1}", item.s, item.Length);
+            }*/
         }
     }
 }
