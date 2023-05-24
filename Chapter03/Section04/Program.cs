@@ -12,14 +12,19 @@ namespace Section04 {
                 "Tokyo","New Delhi","Bangkok","London","Paris","Berlin","Canberra","Hong Kon",
             };
 
-            //var query = names.Where(s => s.Length <= 5);
-            var query = names.Select(s => s.Length);
-            foreach(var s in query) {
-                Console.WriteLine(s);
+            var query = names.Where(s => s.Length <= 5);
+            //var query = names.Select(s => s.Length);
+
+            foreach(var item in query) {
+                Console.WriteLine(item);
             }
+            Console.WriteLine("----------------");
 
+            names[0] = "Osaka";
 
-
+            foreach (var item in query) {
+                Console.WriteLine(item);
+            }
 
 
 
