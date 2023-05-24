@@ -28,11 +28,11 @@ namespace Exercise01 {
 
         private static void Exercise1_1(List<int> numbers) {
             var div = numbers.Exists(n => n % 8 == 0 || n % 9 == 0);
-            if (div) {
+            if (div) 
                 Console.WriteLine("存在しています");
-            } else {
+            else 
                 Console.WriteLine("存在していません");
-            }
+            
         }
 
         private static void Exercise1_2(List<int> numbers) {
@@ -40,16 +40,16 @@ namespace Exercise01 {
         }
 
         private static void Exercise1_3(List<int> numbers) {
-            var fifty = numbers.Where(s => s >= 50);
-            foreach(int s in fifty) {
-                Console.WriteLine("{0}",s);
+            IEnumerable<int> fifty = numbers.Where(n => n >= 50);
+            foreach(var n in fifty) {
+                Console.WriteLine("{0}",n);
             }
         }
 
         private static void Exercise1_4(List<int> numbers) {
-            var twice = numbers.Select(s => s * 2);
-            foreach(var s in twice) {
-                Console.WriteLine("{0}", s);
+            IEnumerable<int> twice = numbers.Select(n => n * 2);
+            foreach(var n in twice) {
+                Console.WriteLine("{0}", n);
             }
         }
     }
