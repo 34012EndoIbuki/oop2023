@@ -40,17 +40,19 @@ namespace Exercise01 {
         }
 
         private static void Exercise1_3(List<int> numbers) {
-            IEnumerable<int> fifty = numbers.Where(n => n >= 50);
+            ((numbers.Where(n => n >= 50).ToList()).ForEach(s => Console.WriteLine(s + " "));
+            /*var fifty = numbers.Where(n => n >= 50).ToList();
             foreach(var n in fifty) {
                 Console.WriteLine("{0}",n);
-            }
+            }*/
         }
 
         private static void Exercise1_4(List<int> numbers) {
-            IEnumerable<int> twice = numbers.Select(n => n * 2);
+            numbers.Select(n => n * 2).ToList().ForEach(s => Console.WriteLine(s + " "));
+            /*var twice = numbers.Select(n => n * 2).ToList();
             foreach(var n in twice) {
                 Console.WriteLine("{0}", n);
-            }
+            }*/
         }
     }
 }
