@@ -1,0 +1,7 @@
+C:\Users\infosys\source\repos\oop2023\Chapter04\TryParse\Section07\bin\Debug\Section07.exe.config
+C:\Users\infosys\source\repos\oop2023\Chapter04\TryParse\Section07\bin\Debug\Section07.exe
+C:\Users\infosys\source\repos\oop2023\Chapter04\TryParse\Section07\bin\Debug\Section07.pdb
+C:\Users\infosys\source\repos\oop2023\Chapter04\TryParse\Section07\obj\Debug\Section07.csproj.AssemblyReference.cache
+C:\Users\infosys\source\repos\oop2023\Chapter04\TryParse\Section07\obj\Debug\Section07.csproj.CoreCompileInputs.cache
+C:\Users\infosys\source\repos\oop2023\Chapter04\TryParse\Section07\obj\Debug\Section07.exe
+C:\Users\infosys\source\repos\oop2023\Chapter04\TryParse\Section07\obj\Debug\Section07.pdb

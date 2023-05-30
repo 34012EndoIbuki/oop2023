@@ -1,0 +1,7 @@
+C:\Users\infosys\source\repos\oop2023\Chapter04\演習問題\Exercise01\bin\Debug\Exercise01.dll.config
+C:\Users\infosys\source\repos\oop2023\Chapter04\演習問題\Exercise01\bin\Debug\Exercise01.dll
+C:\Users\infosys\source\repos\oop2023\Chapter04\演習問題\Exercise01\bin\Debug\Exercise01.pdb
+C:\Users\infosys\source\repos\oop2023\Chapter04\演習問題\Exercise01\obj\Debug\Exercise01.csproj.AssemblyReference.cache
+C:\Users\infosys\source\repos\oop2023\Chapter04\演習問題\Exercise01\obj\Debug\Exercise01.csproj.CoreCompileInputs.cache
+C:\Users\infosys\source\repos\oop2023\Chapter04\演習問題\Exercise01\obj\Debug\Exercise01.dll
+C:\Users\infosys\source\repos\oop2023\Chapter04\演習問題\Exercise01\obj\Debug\Exercise01.pdb
