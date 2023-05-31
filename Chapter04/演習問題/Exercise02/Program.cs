@@ -52,19 +52,25 @@ namespace Exercise02 {
                 if (n.Is21Century == true) {
                     return n;
                 }
+            //if(n.Is21Century)でOK
             return null;   
         }
 
         private static void Exercise2_4(YearMonth[] ymCollection) {
-            if(ymCollection != null) {
-                Console.WriteLine(ymCollection);
+            var ym = FindFirst21C(ymCollection);
+            if (ymCollection != null) {
+                Console.WriteLine(ym);
             } else {
-                Console.WriteLine
+                Console.WriteLine("21世紀のデータはありません");
             }
         }
 
         private static void Exercise2_5(YearMonth[] ymCollection) {
-            
+
+            //ToArray()で即時実行
+            var array = ymCollection.Select(n => n.AddOneMonth()).ToArray();
+
+            Exercise2_2(array);
         }
     }
 }
