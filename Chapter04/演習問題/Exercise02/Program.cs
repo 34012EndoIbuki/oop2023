@@ -48,11 +48,19 @@ namespace Exercise02 {
 
         // 4.2.3
         static YearMonth FindFirst21C(YearMonth[] yms) {
-            return;
+            foreach (var n in yms)
+                if (n.Is21Century == true) {
+                    return n;
+                }
+            return null;   
         }
 
         private static void Exercise2_4(YearMonth[] ymCollection) {
-            
+            if(ymCollection != null) {
+                Console.WriteLine(ymCollection);
+            } else {
+                Console.WriteLine
+            }
         }
 
         private static void Exercise2_5(YearMonth[] ymCollection) {
