@@ -64,7 +64,17 @@ namespace Exercise03 {
         }
 
         private static void Exercise3_5(string text) {
-            
-        }
+            var sb = new StringBuilder();
+            var word = text.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+            foreach (var words in word) {
+                if (Array.IndexOf(word, words) != word.Length - 1) {
+                    sb.Append(words + ' ');
+                } else {
+                    sb.Append(words);
+                }
+
+            }
+            var NewText = sb.ToString();
+            Console.WriteLine(NewText);
     }
 }
