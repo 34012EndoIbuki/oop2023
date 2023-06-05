@@ -8,10 +8,49 @@ namespace Exercise03 {
     class Program {
         static void Main(string[] args) {
 
-            string str = "Jackdaws love my big sphinx of quartz";
+            var text = "Jackdaws love my big sphinx of quartz";
 
-            var contains = str.Contains(' ');
-            Console.WriteLine(contains);
+            Exercise3_1(text);
+            Console.WriteLine("-----");
+
+            Exercise3_2(text);
+            Console.WriteLine("-----");
+
+            Exercise3_3(text);
+            Console.WriteLine("-----");
+
+            Exercise3_4(text);
+            Console.WriteLine("-----");
+
+            Exercise3_5(text);
+        }
+
+        private static void Exercise3_1(string text) {
+            int count = 0;
+            char str = ' ';
+            foreach(char n in text) {
+                if(n == str) {
+                    count++;
+                }
+            }
+            
+            Console.WriteLine("空白の数:" + count);
+        }
+
+        private static void Exercise3_2(string text) {
+            
+        }
+
+        private static void Exercise3_3(string text) {
+            
+        }
+
+        private static void Exercise3_4(string text) {
+            
+        }
+
+        private static void Exercise3_5(string text) {
+            
         }
     }
 }
