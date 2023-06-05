@@ -38,7 +38,16 @@ namespace Exercise03 {
         }
 
         private static void Exercise3_2(string text) {
-            
+            string replace = "small";
+            int index;
+            string inter;
+            string result;
+            if (text.Contains("big")) {
+                index = text.IndexOf("big");
+                inter = text.Remove(index, 3);
+                result = inter.Insert(index, replace);
+                Console.WriteLine(result);
+            }
         }
 
         private static void Exercise3_3(string text) {
