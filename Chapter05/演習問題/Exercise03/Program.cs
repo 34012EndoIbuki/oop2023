@@ -51,11 +51,16 @@ namespace Exercise03 {
         }
 
         private static void Exercise3_3(string text) {
-            
+
         }
 
         private static void Exercise3_4(string text) {
-            
+            var word = text.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+            foreach (var words in word) {
+                if (words.Length <= 4) {
+                    Console.WriteLine(words);
+                }
+            }
         }
 
         private static void Exercise3_5(string text) {
