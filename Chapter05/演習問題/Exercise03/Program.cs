@@ -51,7 +51,14 @@ namespace Exercise03 {
         }
 
         private static void Exercise3_3(string text) {
-
+            int count = 0;
+            char str = ' ';
+            foreach (char n in text) {
+                if (n == str) {
+                    count++;
+                }
+            }
+            Console.WriteLine(count + 1);
         }
 
         private static void Exercise3_4(string text) {
@@ -76,5 +83,6 @@ namespace Exercise03 {
             }
             var NewText = sb.ToString();
             Console.WriteLine(NewText);
+        }
     }
 }
