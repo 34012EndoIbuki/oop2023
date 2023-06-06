@@ -21,14 +21,27 @@ namespace Exercise04 {
             foreach (var words in word) {
                 Console.WriteLine(words);
             }
-
-
+            Console.WriteLine();
 
             string[] lines = {
                 "Novelist=谷崎潤一郎;BestWork=春琴抄;Born=1886",
-                "Novelist=谷崎潤一郎;BestWork=春琴抄;Born=1886",
-                "Novelist=谷崎潤一郎;BestWork=春琴抄;Born=1886",
+                "Novelist=夏目漱石;BestWork=坊ちゃん;Born=1867",
+                "Novelist=太宰治;BestWork=人間失格;Born=1909",
+                "Novelist=宮沢賢治;BestWork=銀河鉄道;Born=1896",
             };
+
+            lines = lines.Select(n => n.Replace("Novelist", "作家")).ToArray();
+            lines = lines.Select(n => n.Replace("BestWork", "代表作")).ToArray();
+            lines = lines.Select(n => n.Replace("Born", "誕生日")).ToArray();
+            lines = lines.Select(n => n.Replace(";", " ")).ToArray();
+
+            foreach (var item in lines) {
+                word = item.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+                foreach (var category in word) {
+                    Console.WriteLine(category);
+                }
+                Console.WriteLine();
+            }
 
 
         }
