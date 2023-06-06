@@ -43,7 +43,48 @@ namespace Exercise04 {
                 Console.WriteLine();
             }
 
+            #region 先生 文字列
+            /*foreach (var pair in line.Split(";")) {
+                var array = pair.Split("=");
+                Console.WriteLine("{0}:{1}", ToJapanese(array[0], array[1]));
+            }
+
+            static string ToJapanese(string key) {
+                switch (key) {
+                    case "Novelist":
+                        return "作家";
+                    case "BestWork":
+                        return "代表作";
+                    case "Born":
+                        return "誕生日";
+                }
+                throw new ArgumentException("正しい引数ではありません");
+            }*/
+            #endregion
+
+            #region　先生　配列
+            /*foreach(var line in lines){
+                foreach (var pair in line.Split(";")) {
+                    var array = pair.Split("=");
+                Console.WriteLine("{0}:{1}", ToJapanese(array[0], array[1]));
+                }
+            }
+
+            static string ToJapanese(string key) {
+                switch (key) {
+                    case "Novelist":
+                        return "作家";
+                    case "BestWork":
+                        return "代表作";
+                    case "Born":
+                        return "誕生日";
+                }
+                throw new ArgumentException("正しい引数ではありません");
+            }*/
+            #endregion
+
 
         }
     }
 }
+
