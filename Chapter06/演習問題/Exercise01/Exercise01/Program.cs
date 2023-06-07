@@ -58,7 +58,10 @@ namespace Exercise01 {
         }
 
         private static void Exercise1_4(int[] numbers) {
-            
+            var tosmall = numbers.OrderBy(x => x).Take(3);
+            foreach (var small in tosmall) {
+                Console.WriteLine(small);
+            }
         }
 
         private static void Exercise1_5(int[] numbers) {
