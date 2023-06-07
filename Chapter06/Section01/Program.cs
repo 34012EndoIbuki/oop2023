@@ -34,6 +34,7 @@ namespace Section01 {
             Console.WriteLine();
             #endregion
 
+
             #region 物語がつく作品の平均ページ数を表示
             var MonoAvg = books.Where(x => x.Title.Contains("物語")).Average(x => x.Pages);
             Console.WriteLine("物語シリーズの平均価格:{0}ページ", MonoAvg);
