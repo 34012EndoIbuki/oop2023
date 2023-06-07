@@ -33,16 +33,28 @@ namespace Exercise01 {
         }
 
         private static void Exercise1_2(int[] numbers) {
+            //未完成
             var num = numbers.Length;
-            var result = numbers.Take(2);
-            foreach (var back in result) {
+            num -= 2;
+            var item = numbers.Where(x => Array.IndexOf(numbers, x) >= num).Take(3);
+            foreach (var back in item) {
                 Console.WriteLine(back);
             }
             Console.WriteLine();
+
+            //先生
+            //Skipで要素数-2 子分の要素をSkipしている
+            var skip = numbers.Length - 2;
+            foreach(var n in numbers.Skip(skip)) {
+                Console.WriteLine(n);
+            }
         }
 
         private static void Exercise1_3(int[] numbers) {
-            
+            var tostr = numbers.Select(x => x.ToString());
+            foreach(var str in tostr) {
+                Console.WriteLine(str);
+            }
         }
 
         private static void Exercise1_4(int[] numbers) {
