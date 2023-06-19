@@ -1,0 +1,7 @@
+C:\Users\n_uchiyama\source\repos\OOP2021\TestProject\Test02\bin\Debug\Test02.exe.config
+C:\Users\n_uchiyama\source\repos\OOP2021\TestProject\Test02\bin\Debug\Test02.exe
+C:\Users\n_uchiyama\source\repos\OOP2021\TestProject\Test02\bin\Debug\Test02.pdb
+C:\Users\n_uchiyama\source\repos\OOP2021\TestProject\Test02\obj\Debug\Test02.csproj.CoreCompileInputs.cache
+C:\Users\n_uchiyama\source\repos\OOP2021\TestProject\Test02\obj\Debug\Test02.exe
+C:\Users\n_uchiyama\source\repos\OOP2021\TestProject\Test02\obj\Debug\Test02.pdb
+C:\Users\n_uchiyama\source\repos\OOP2021\TestProject\Test02\obj\Debug\Test02.csprojAssemblyReference.cache

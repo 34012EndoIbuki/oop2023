@@ -1,0 +1,16 @@
+C:\Users\n_uchiyama\source\repos\OOP2021\TestProject\Test01\obj\Debug\Test01.csprojAssemblyReference.cache
+C:\Users\n_uchiyama\source\repos\OOP2021\TestProject\Test01\obj\Debug\Test01.csproj.CoreCompileInputs.cache
+C:\Users\n_uchiyama\source\repos\OOP2021\TestProject\Test01\bin\Debug\StudentScore.csv
+C:\Users\n_uchiyama\source\repos\OOP2021\TestProject\Test01\bin\Debug\Test01.exe.config
+C:\Users\n_uchiyama\source\repos\OOP2021\TestProject\Test01\bin\Debug\Test01.exe
+C:\Users\n_uchiyama\source\repos\OOP2021\TestProject\Test01\bin\Debug\Test01.pdb
+C:\Users\n_uchiyama\source\repos\OOP2021\TestProject\Test01\obj\Debug\Test01.exe
+C:\Users\n_uchiyama\source\repos\OOP2021\TestProject\Test01\obj\Debug\Test01.pdb
+C:\Users\n_uchiyama\Desktop\TestProject\Test01\bin\Debug\StudentScore.csv
+C:\Users\n_uchiyama\Desktop\TestProject\Test01\bin\Debug\Test01.exe.config
+C:\Users\n_uchiyama\Desktop\TestProject\Test01\bin\Debug\Test01.exe
+C:\Users\n_uchiyama\Desktop\TestProject\Test01\bin\Debug\Test01.pdb
+C:\Users\n_uchiyama\Desktop\TestProject\Test01\obj\Debug\Test01.csprojAssemblyReference.cache
+C:\Users\n_uchiyama\Desktop\TestProject\Test01\obj\Debug\Test01.csproj.CoreCompileInputs.cache
+C:\Users\n_uchiyama\Desktop\TestProject\Test01\obj\Debug\Test01.exe
+C:\Users\n_uchiyama\Desktop\TestProject\Test01\obj\Debug\Test01.pdb
