@@ -14,3 +14,11 @@ C:\Users\n_uchiyama\Desktop\TestProject\Test01\obj\Debug\Test01.csprojAssemblyRe
 C:\Users\n_uchiyama\Desktop\TestProject\Test01\obj\Debug\Test01.csproj.CoreCompileInputs.cache
 C:\Users\n_uchiyama\Desktop\TestProject\Test01\obj\Debug\Test01.exe
 C:\Users\n_uchiyama\Desktop\TestProject\Test01\obj\Debug\Test01.pdb
+C:\Users\infosys\source\repos\oop2023\TestProject\Test01\obj\Debug\Test01.csproj.AssemblyReference.cache
+C:\Users\infosys\source\repos\oop2023\TestProject\Test01\obj\Debug\Test01.csproj.CoreCompileInputs.cache
+C:\Users\infosys\source\repos\oop2023\TestProject\Test01\obj\Debug\Test01.exe
+C:\Users\infosys\source\repos\oop2023\TestProject\Test01\obj\Debug\Test01.pdb
+C:\Users\infosys\source\repos\oop2023\TestProject\Test01\bin\Debug\StudentScore.csv
+C:\Users\infosys\source\repos\oop2023\TestProject\Test01\bin\Debug\Test01.exe.config
+C:\Users\infosys\source\repos\oop2023\TestProject\Test01\bin\Debug\Test01.exe
+C:\Users\infosys\source\repos\oop2023\TestProject\Test01\bin\Debug\Test01.pdb
