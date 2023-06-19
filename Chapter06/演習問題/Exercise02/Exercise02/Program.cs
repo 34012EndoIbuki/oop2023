@@ -42,23 +42,33 @@ namespace Exercise02 {
         }
 
         private static void Exercise2_1(List<Book> books) {
-
+            var name = books.Where(n => n.Title.Contains("ワンダフル・C#ライフ"));
+            foreach(var mono in name) {
+                Console.WriteLine("{0}円:{1}ページ", mono.Price, mono.Pages);
+            }
         }
 
         private static void Exercise2_2(List<Book> books) {
-
+            var name = books.Count(n => n.Title.Contains("C#"));
+            Console.WriteLine(name);
         }
 
         private static void Exercise2_3(List<Book> books) {
-
+            var name = books.Where(n => n.Title.Contains("C#")).Average(n => n.Pages);
+            Console.WriteLine("{0}ページ", name);
         }
 
         private static void Exercise2_4(List<Book> books) {
-
+            var name = books.FirstOrDefault(n => n.Price > 4000);
+            if (name != null) {
+                Console.WriteLine(name.Title);
+            }
         }
 
         private static void Exercise2_5(List<Book> books) {
-
+            var name = books.Where(n => n.Price < 4000).Max(n => n.Price);
+            Console.WriteLine(name);
+            
         }
 
         private static void Exercise2_6(List<Book> books) {

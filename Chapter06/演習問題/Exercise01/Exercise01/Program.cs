@@ -65,7 +65,11 @@ namespace Exercise01 {
         }
 
         private static void Exercise1_5(int[] numbers) {
-            
+            var result = numbers.Distinct().Count(n => n > 10);
+            Console.WriteLine(result);
+            /*foreach(var num in result) {
+                Console.WriteLine(num );
+            }*/
         }
     }
 }
