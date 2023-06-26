@@ -32,18 +32,29 @@ namespace Section02 {
                     if (Console.ReadLine() != "y") {
                         continue;
                     }*/
-
+                    //List<Cityinfo>が存在するためaddで市町村データを追加
                     prefOfficeDict[pref].Add(new CityInfo { City = city, Population = population });
                 } else {
+                    //
                     prefOfficeDict[pref] = new List<CityInfo>();
+                    new CityInfo {City = city,Population = population};
                 }
 
-                //登録処理
-                /*prefOfficeDict[pref] = new CityInfo {
-                    City = city,
-                    Population = population,
-                };*/
-            }
+                //先生ver
+                /*var cityinfo = new CityInfo { City = city, Population = population };
+
+                if (prefOfficeDict.ContainsKey(pref)) {
+                    prefOfficeDict[pref].Add(cityinfo);
+                } else {
+                    prefOfficeDict[pref] = new List<CityInfo> { cityinfo };
+                }*/
+
+                    //登録処理
+                    /*prefOfficeDict[pref] = new CityInfo {
+                        City = city,
+                        Population = population,
+                    };*/
+                }
             Console.WriteLine();
             Console.WriteLine("1:一覧表示,2:県名指定");
             Console.Write(">");
