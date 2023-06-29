@@ -40,8 +40,20 @@ namespace Exercise01 {
         }
 
         private static void Exercise1_2(string text) {
+            var dict = new SortedDictionary<char, int>();
+            foreach (var c in text) {
+                var uc = char.ToLower(c);
+                if ('a' <= uc && uc <= 'z') {
+                    if (dict.ContainsKey(uc)) {
+                        dict[uc]++;
+                    } else {
+                        dict[uc] = 1;
+                    }
+                }
+            }
+            foreach (var item in dict) {
+                Console.WriteLine("{ 0} = { 1}", item.Key, item.Value);
 
-
-        }
+            }
     }
 }
