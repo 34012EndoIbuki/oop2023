@@ -32,6 +32,12 @@ namespace Exercise01 {
             var culture = new CultureInfo("ja-JP");
             culture.DateTimeFormat.Calendar = new JapaneseCalendar();
             Console.WriteLine(dateTime.ToString("ggyy年 M月 d日 (ddd曜日)", culture));
+
+            //簡潔ver
+            Console.WriteLine("{0} {1}", dateTime.ToString("d"),dateTime.ToString("t"));
+            Console.WriteLine("{0} {1}", dateTime.ToString("D"), dateTime.ToString("HH時mm分ss秒"));
+            Console.WriteLine(dateTime.ToString("ggyy年 M月 d日 (ddd曜日)", culture));
+
         }
 
         private static void DisplayDatePattern2(DateTime dateTime) {
