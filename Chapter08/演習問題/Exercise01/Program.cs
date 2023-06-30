@@ -10,7 +10,7 @@ namespace Exercise01 {
         static void Main(string[] args) {
 
             //各曜日を0～6で格納している
-            foreach (var dayofweak in Enum.GetValues(typeof(DayOfWeek)));
+            //foreach (var dayofweak in Enum.GetValues(typeof(DayOfWeek)));
 
             var dateTime = new DateTime(2019, 1, 15, 19, 48, 32);
             DisplayDatePattern1(dateTime);
@@ -33,6 +33,8 @@ namespace Exercise01 {
             culture.DateTimeFormat.Calendar = new JapaneseCalendar();
             Console.WriteLine(dateTime.ToString("ggyy年 M月 d日 (ddd曜日)", culture));
 
+            Console.WriteLine(" "); //改行
+
             //簡潔ver
             Console.WriteLine("{0} {1}", dateTime.ToString("d"),dateTime.ToString("t"));
             Console.WriteLine("{0} {1}", dateTime.ToString("D"), dateTime.ToString("HH時mm分ss秒"));
@@ -41,7 +43,31 @@ namespace Exercise01 {
         }
 
         private static void DisplayDatePattern2(DateTime dateTime) {
+            DayOfWeek dow = dateTime.DayOfWeek; //曜日
+            String nextdow;
             
+            int suu;
+            foreach (var dayofweak in Enum.GetValues(typeof(DayOfWeek))) {
+                string color = Enum.GetName(typeof(DayOfWeek), dayofweak);
+                //Console.WriteLine("{0},{1}", color, (int)dayofweak);
+                do {
+                    Console.Write("何曜日(英語):");
+                    nextdow = Console.ReadLine();
+                } while (nextdow !=  color);
+                if (nextdow == color) {
+                    suu = (int)dayofweak;
+                    Console.WriteLine(suu);
+
+                }
+                
+            }
+            
+            
+            /*var days = (int)dow - int.Parse(nextdow);
+            if(days <= 0) {
+                days += 7;
+            }
+            Console.WriteLine(days);*/
         }
 
         private static void DisplayDatePattern3(DateTime dateTime) {
