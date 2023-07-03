@@ -44,25 +44,44 @@ namespace Exercise01 {
 
         private static void DisplayDatePattern2(DateTime dateTime) {
             DayOfWeek dow = dateTime.DayOfWeek; //曜日
+            var weekcode = new Dictionary<String, String>() {
+                {"日","Sunday" },{"月","Monday" },{"火","Tuesday" },{"水","Wednesday" },
+                {"木","Thursday" },{"金","Friday" },{"土","Saturday" },
+            };
+            int suu = 0;
+            String item;
             String nextdow;
-            
-            int suu;
-            foreach (var dayofweak in Enum.GetValues(typeof(DayOfWeek))) {
+            Console.Write("何曜日(1文字):");
+            nextdow = Console.ReadLine();
+            foreach(var code in weekcode) {
+                if(nextdow == code.Key) {
+                    item = code.Value;
+                    foreach (var dayofweak in Enum.GetValues(typeof(DayOfWeek))) {
+                        string color = Enum.GetName(typeof(DayOfWeek), dayofweak);
+                        //Console.WriteLine("{0},{1}", color, (int)dayofweak);
+                        if (item == color) {
+                            suu = (int)dayofweak;
+                            Console.WriteLine(suu);
+
+                        }
+                    }
+                }
+            }
+            Console.WriteLine(suu);
+
+
+            /*foreach (var dayofweak in Enum.GetValues(typeof(DayOfWeek))) {
                 string color = Enum.GetName(typeof(DayOfWeek), dayofweak);
                 //Console.WriteLine("{0},{1}", color, (int)dayofweak);
-                do {
-                    Console.Write("何曜日(英語):");
-                    nextdow = Console.ReadLine();
-                } while (nextdow !=  color);
-                if (nextdow == color) {
+                if (item == color) {
                     suu = (int)dayofweak;
                     Console.WriteLine(suu);
 
                 }
-                
-            }
-            
-            
+
+            }*/
+
+
             /*var days = (int)dow - int.Parse(nextdow);
             if(days <= 0) {
                 days += 7;
