@@ -43,6 +43,13 @@ namespace Exercise02 {
             for (int i = 0; i < 7; i++) {
                 Console.WriteLine(date.ToString("yyyy年M月d日(ddd)") + " の次の週の " + NextDay(date,weeks[i]).ToString("ddd曜日は yyyy年M月d日"));
             }
+
+            //先生
+            /*foreach (var dayofweek in Enum.GetValues(typeof(DayOfWeek))) {
+                Console.WriteLine("{0:yy/MM/ddの次週");
+            }*/
+
+
         }
 
         //基準日は日曜日

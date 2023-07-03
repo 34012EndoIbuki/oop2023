@@ -1,0 +1,10 @@
+C:\Users\infosys\source\repos\oop2023\Chapter08\フォームアプリケーション\CalendarApp\bin\Debug\CalendarApp.exe.config
+C:\Users\infosys\source\repos\oop2023\Chapter08\フォームアプリケーション\CalendarApp\bin\Debug\CalendarApp.exe
+C:\Users\infosys\source\repos\oop2023\Chapter08\フォームアプリケーション\CalendarApp\bin\Debug\CalendarApp.pdb
+C:\Users\infosys\source\repos\oop2023\Chapter08\フォームアプリケーション\CalendarApp\obj\Debug\CalendarApp.csproj.AssemblyReference.cache
+C:\Users\infosys\source\repos\oop2023\Chapter08\フォームアプリケーション\CalendarApp\obj\Debug\CalendarApp.Properties.Resources.resources
+C:\Users\infosys\source\repos\oop2023\Chapter08\フォームアプリケーション\CalendarApp\obj\Debug\CalendarApp.csproj.GenerateResource.cache
+C:\Users\infosys\source\repos\oop2023\Chapter08\フォームアプリケーション\CalendarApp\obj\Debug\CalendarApp.csproj.CoreCompileInputs.cache
+C:\Users\infosys\source\repos\oop2023\Chapter08\フォームアプリケーション\CalendarApp\obj\Debug\CalendarApp.exe
+C:\Users\infosys\source\repos\oop2023\Chapter08\フォームアプリケーション\CalendarApp\obj\Debug\CalendarApp.pdb
+C:\Users\infosys\source\repos\oop2023\Chapter08\フォームアプリケーション\CalendarApp\obj\Debug\CalendarApp.btPMonth.resources
