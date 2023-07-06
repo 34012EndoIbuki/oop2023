@@ -24,27 +24,28 @@ namespace CalendarApp {
         /// コード エディターで変更しないでください。
         /// </summary>
         private void InitializeComponent() {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.dtpDate = new System.Windows.Forms.DateTimePicker();
             this.btDayCalc = new System.Windows.Forms.Button();
             this.tbMessage = new System.Windows.Forms.TextBox();
             this.btMYear = new System.Windows.Forms.Button();
             this.btPYear = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.btMMonth = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.btMDay = new System.Windows.Forms.Button();
             this.btPDay = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.timeText = new System.Windows.Forms.TextBox();
+            this.btAge = new System.Windows.Forms.Button();
+            this.tmTimeDisp = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("MS UI Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label1.Location = new System.Drawing.Point(82, 54);
+            this.label1.Location = new System.Drawing.Point(12, 54);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(86, 33);
             this.label1.TabIndex = 0;
@@ -53,7 +54,7 @@ namespace CalendarApp {
             // dtpDate
             // 
             this.dtpDate.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.dtpDate.Location = new System.Drawing.Point(167, 56);
+            this.dtpDate.Location = new System.Drawing.Point(104, 54);
             this.dtpDate.Name = "dtpDate";
             this.dtpDate.Size = new System.Drawing.Size(200, 31);
             this.dtpDate.TabIndex = 1;
@@ -61,7 +62,7 @@ namespace CalendarApp {
             // btDayCalc
             // 
             this.btDayCalc.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btDayCalc.Location = new System.Drawing.Point(88, 114);
+            this.btDayCalc.Location = new System.Drawing.Point(18, 90);
             this.btDayCalc.Name = "btDayCalc";
             this.btDayCalc.Size = new System.Drawing.Size(127, 82);
             this.btDayCalc.TabIndex = 2;
@@ -79,7 +80,7 @@ namespace CalendarApp {
             // 
             // btMYear
             // 
-            this.btMYear.Location = new System.Drawing.Point(88, 224);
+            this.btMYear.Location = new System.Drawing.Point(23, 181);
             this.btMYear.Name = "btMYear";
             this.btMYear.Size = new System.Drawing.Size(75, 57);
             this.btMYear.TabIndex = 4;
@@ -88,61 +89,25 @@ namespace CalendarApp {
             // 
             // btPYear
             // 
-            this.btPYear.Location = new System.Drawing.Point(200, 224);
+            this.btPYear.Location = new System.Drawing.Point(23, 244);
             this.btPYear.Name = "btPYear";
             this.btPYear.Size = new System.Drawing.Size(75, 57);
             this.btPYear.TabIndex = 4;
             this.btPYear.Text = "+年";
             this.btPYear.UseVisualStyleBackColor = true;
             // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(200, 305);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 57);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "button1";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
             // btMMonth
             // 
-            this.btMMonth.Location = new System.Drawing.Point(88, 305);
+            this.btMMonth.Location = new System.Drawing.Point(104, 181);
             this.btMMonth.Name = "btMMonth";
             this.btMMonth.Size = new System.Drawing.Size(75, 57);
             this.btMMonth.TabIndex = 4;
             this.btMMonth.Text = "-月";
             this.btMMonth.UseVisualStyleBackColor = true;
             // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(88, 381);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 57);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "button1";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(200, 305);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 57);
-            this.button6.TabIndex = 4;
-            this.button6.Text = "button1";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(88, 381);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 57);
-            this.button7.TabIndex = 4;
-            this.button7.Text = "button1";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(200, 305);
+            this.button8.Location = new System.Drawing.Point(104, 244);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(75, 57);
             this.button8.TabIndex = 4;
@@ -151,35 +116,70 @@ namespace CalendarApp {
             // 
             // btMDay
             // 
-            this.btMDay.Location = new System.Drawing.Point(88, 381);
+            this.btMDay.Location = new System.Drawing.Point(185, 181);
             this.btMDay.Name = "btMDay";
             this.btMDay.Size = new System.Drawing.Size(75, 57);
             this.btMDay.TabIndex = 4;
             this.btMDay.Text = "-日";
             this.btMDay.UseVisualStyleBackColor = true;
+            this.btMDay.Click += new System.EventHandler(this.btMDay_Click);
             // 
             // btPDay
             // 
-            this.btPDay.Location = new System.Drawing.Point(200, 381);
+            this.btPDay.Location = new System.Drawing.Point(185, 244);
             this.btPDay.Name = "btPDay";
             this.btPDay.Size = new System.Drawing.Size(75, 57);
             this.btPDay.TabIndex = 4;
             this.btPDay.Text = "+日";
             this.btPDay.UseVisualStyleBackColor = true;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label2.Location = new System.Drawing.Point(12, 405);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(106, 24);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "現在時刻";
+            // 
+            // timeText
+            // 
+            this.timeText.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.timeText.Location = new System.Drawing.Point(124, 402);
+            this.timeText.Multiline = true;
+            this.timeText.Name = "timeText";
+            this.timeText.Size = new System.Drawing.Size(259, 36);
+            this.timeText.TabIndex = 6;
+            // 
+            // btAge
+            // 
+            this.btAge.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btAge.Location = new System.Drawing.Point(170, 91);
+            this.btAge.Name = "btAge";
+            this.btAge.Size = new System.Drawing.Size(124, 81);
+            this.btAge.TabIndex = 7;
+            this.btAge.Text = "年齢";
+            this.btAge.UseVisualStyleBackColor = true;
+            this.btAge.Click += new System.EventHandler(this.btAge_Click);
+            // 
+            // tmTimeDisp
+            // 
+            this.tmTimeDisp.Interval = 1000;
+            this.tmTimeDisp.Tick += new System.EventHandler(this.tmTimeDisp_Tick);
+            // 
             // btPMonth
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btAge);
+            this.Controls.Add(this.timeText);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btMDay);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button5);
             this.Controls.Add(this.btPDay);
             this.Controls.Add(this.button8);
-            this.Controls.Add(this.button6);
             this.Controls.Add(this.btMMonth);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.btPYear);
             this.Controls.Add(this.btMYear);
             this.Controls.Add(this.tbMessage);
@@ -201,14 +201,14 @@ namespace CalendarApp {
         private System.Windows.Forms.TextBox tbMessage;
         private System.Windows.Forms.Button btMYear;
         private System.Windows.Forms.Button btPYear;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btMMonth;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button btMDay;
         private System.Windows.Forms.Button btPDay;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox timeText;
+        private System.Windows.Forms.Button btAge;
+        private System.Windows.Forms.Timer tmTimeDisp;
     }
 }
 
