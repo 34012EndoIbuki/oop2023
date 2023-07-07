@@ -1,0 +1,10 @@
+C:\Users\infosys\source\repos\oop2023\FormApps\CarReportSystem\bin\Debug\CarReportSystem.exe.config
+C:\Users\infosys\source\repos\oop2023\FormApps\CarReportSystem\bin\Debug\CarReportSystem.exe
+C:\Users\infosys\source\repos\oop2023\FormApps\CarReportSystem\bin\Debug\CarReportSystem.pdb
+C:\Users\infosys\source\repos\oop2023\FormApps\CarReportSystem\obj\Debug\CarReportSystem.csproj.AssemblyReference.cache
+C:\Users\infosys\source\repos\oop2023\FormApps\CarReportSystem\obj\Debug\CarReportSystem.Form1.resources
+C:\Users\infosys\source\repos\oop2023\FormApps\CarReportSystem\obj\Debug\CarReportSystem.Properties.Resources.resources
+C:\Users\infosys\source\repos\oop2023\FormApps\CarReportSystem\obj\Debug\CarReportSystem.csproj.GenerateResource.cache
+C:\Users\infosys\source\repos\oop2023\FormApps\CarReportSystem\obj\Debug\CarReportSystem.csproj.CoreCompileInputs.cache
+C:\Users\infosys\source\repos\oop2023\FormApps\CarReportSystem\obj\Debug\CarReportSystem.exe
+C:\Users\infosys\source\repos\oop2023\FormApps\CarReportSystem\obj\Debug\CarReportSystem.pdb
