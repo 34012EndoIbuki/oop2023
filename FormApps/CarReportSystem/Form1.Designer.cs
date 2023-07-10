@@ -142,9 +142,9 @@ namespace CarReportSystem {
             this.groupBox1.Controls.Add(this.rbToyota);
             this.groupBox1.Controls.Add(this.rbOther);
             this.groupBox1.Controls.Add(this.rbImported);
+            this.groupBox1.Controls.Add(this.rbSuzuki);
             this.groupBox1.Controls.Add(this.rbDaihatu);
             this.groupBox1.Controls.Add(this.rbSubaru);
-            this.groupBox1.Controls.Add(this.rbSuzuki);
             this.groupBox1.Controls.Add(this.rbHonda);
             this.groupBox1.Controls.Add(this.rbNissan);
             this.groupBox1.Location = new System.Drawing.Point(126, 145);
@@ -167,7 +167,7 @@ namespace CarReportSystem {
             // rbImported
             // 
             this.rbImported.AutoSize = true;
-            this.rbImported.Location = new System.Drawing.Point(129, 40);
+            this.rbImported.Location = new System.Drawing.Point(192, 18);
             this.rbImported.Name = "rbImported";
             this.rbImported.Size = new System.Drawing.Size(59, 16);
             this.rbImported.TabIndex = 4;
@@ -178,7 +178,7 @@ namespace CarReportSystem {
             // rbDaihatu
             // 
             this.rbDaihatu.AutoSize = true;
-            this.rbDaihatu.Location = new System.Drawing.Point(64, 40);
+            this.rbDaihatu.Location = new System.Drawing.Point(128, 42);
             this.rbDaihatu.Name = "rbDaihatu";
             this.rbDaihatu.Size = new System.Drawing.Size(60, 16);
             this.rbDaihatu.TabIndex = 4;
@@ -200,7 +200,7 @@ namespace CarReportSystem {
             // rbSuzuki
             // 
             this.rbSuzuki.AutoSize = true;
-            this.rbSuzuki.Location = new System.Drawing.Point(194, 18);
+            this.rbSuzuki.Location = new System.Drawing.Point(64, 40);
             this.rbSuzuki.Name = "rbSuzuki";
             this.rbSuzuki.Size = new System.Drawing.Size(52, 16);
             this.rbSuzuki.TabIndex = 4;
