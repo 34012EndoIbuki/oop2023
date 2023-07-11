@@ -38,7 +38,7 @@ namespace CarReportSystem {
 
             foreach (var item in gbMaker.Controls) {
                 if (((RadioButton)item).Checked == true) {  //trueは省略可
-                    return (CarReport.MakerGroup)((RadioButton)item).Tag;
+                    return (CarReport.MakerGroup)int.Parse(((RadioButton)item).Tag.ToString());
                 }
             }
             return CarReport.MakerGroup.その他;
@@ -81,5 +81,7 @@ namespace CarReportSystem {
         private void Form1_Load(object sender, EventArgs e) {
             dgvCarReports.Columns[5].Visible = false;   //画像項目非表示
         }
+
+        
     }
 }

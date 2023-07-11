@@ -77,8 +77,7 @@ namespace CarReportSystem {
             this.dttpDate.Location = new System.Drawing.Point(126, 45);
             this.dttpDate.Name = "dttpDate";
             this.dttpDate.Size = new System.Drawing.Size(200, 19);
-            this.dttpDate.TabIndex = 1;
-            // 
+            this.dttpDate.TabIndex = 1;            // 
             // label2
             // 
             this.label2.AutoSize = true;

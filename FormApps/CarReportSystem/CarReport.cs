@@ -21,7 +21,11 @@ namespace CarReportSystem {
             public Image CarImage { get; set; }     //画像
 
         //メーカー一覧(列挙型)
-        public enum MakerGroup {トヨタ,日産,ホンダ,輸入車,スバル,スズキ,ダイハツ,その他,
+        public enum MakerGroup {
+            トヨタ,日産,ホンダ,輸入車,スバル,スズキ,ダイハツ,その他,
+        }
+        public enum tugGroup {
+            dttpDate, cbAuthor, gbMaker, cbCarName, tbReport, ofdImageFileOpen
         }
 
 
