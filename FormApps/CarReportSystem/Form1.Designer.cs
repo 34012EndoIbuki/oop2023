@@ -77,7 +77,8 @@ namespace CarReportSystem {
             this.dttpDate.Location = new System.Drawing.Point(126, 45);
             this.dttpDate.Name = "dttpDate";
             this.dttpDate.Size = new System.Drawing.Size(200, 19);
-            this.dttpDate.TabIndex = 1;            // 
+            this.dttpDate.TabIndex = 1;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -263,6 +264,7 @@ namespace CarReportSystem {
             this.dgvCarReports.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCarReports.Size = new System.Drawing.Size(501, 150);
             this.dgvCarReports.TabIndex = 8;
+            this.dgvCarReports.Click += new System.EventHandler(this.dgvCarReports_Click_1);
             // 
             // label6
             // 
@@ -318,6 +320,7 @@ namespace CarReportSystem {
             this.btModifyReport.TabIndex = 12;
             this.btModifyReport.Text = "修正";
             this.btModifyReport.UseVisualStyleBackColor = true;
+            this.btModifyReport.Click += new System.EventHandler(this.btModifyReport_Click);
             // 
             // btAddReport
             // 
