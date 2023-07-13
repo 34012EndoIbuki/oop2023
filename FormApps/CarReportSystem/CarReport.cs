@@ -27,6 +27,9 @@ namespace CarReportSystem {
         public enum tugGroup {
             dttpDate, cbAuthor, gbMaker, cbCarName, tbReport, ofdImageFileOpen
         }
+        public enum rbGroup {
+            rbToyota, rbNissan, rbHonda, rbImported, rbSubaru, rbSuzuki,rbDaihatu, rbOther,
+        }
 
 
     }
