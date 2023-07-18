@@ -8,3 +8,4 @@ C:\Users\infosys\source\repos\oop2023\FormApps\CarReportSystem\obj\Debug\CarRepo
 C:\Users\infosys\source\repos\oop2023\FormApps\CarReportSystem\obj\Debug\CarReportSystem.csproj.CoreCompileInputs.cache
 C:\Users\infosys\source\repos\oop2023\FormApps\CarReportSystem\obj\Debug\CarReportSystem.exe
 C:\Users\infosys\source\repos\oop2023\FormApps\CarReportSystem\obj\Debug\CarReportSystem.pdb
+C:\Users\infosys\source\repos\oop2023\FormApps\CarReportSystem\obj\Debug\CarReportSystem.VersionForm.resources

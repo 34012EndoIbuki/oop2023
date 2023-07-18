@@ -45,6 +45,14 @@ namespace CarReportSystem {
             repo.Report = tbReport.Text;
             repo.CarImage = ofdImageFileOpen.Image;
 
+
+            if (!cbAuthor.Items.Contains(cbAuthor.Text)) {
+                cbAuthor.Items.Add(cbAuthor.Text);
+            }
+            if (!cbCarName.Items.Contains(cbCarName.Text)) {
+                cbCarName.Items.Add(cbCarName.Text);
+            }
+
             CarReports.Add(repo);
             Clear();
         }

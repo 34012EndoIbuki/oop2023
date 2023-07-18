@@ -35,7 +35,6 @@ namespace CarReportSystem {
             this.btOk.TabIndex = 0;
             this.btOk.Text = "OK";
             this.btOk.UseVisualStyleBackColor = true;
-            this.btOk.Click += new System.EventHandler(this.button1_Click);
             // 
             // VersionForm
             // 
