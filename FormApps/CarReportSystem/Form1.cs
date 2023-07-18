@@ -13,6 +13,7 @@ namespace CarReportSystem {
 
         //管理用データ
         BindingList<CarReport> CarReports = new BindingList<CarReport>();
+        private int mode;
 
         public Form1() {
             InitializeComponent();
@@ -192,8 +193,9 @@ namespace CarReportSystem {
 
         //画像表示
         private void pbOpenImage_Click(object sender, EventArgs e) {
-            ofdOpenImageFile.ShowDialog();
-            ofdImageFileOpen.Image = Image.FromFile(ofdOpenImageFile.FileName);
+            if(ofdOpenImageFile.ShowDialog() == DialogResult.OK) {
+                ofdImageFileOpen.Image = Image.FromFile(ofdOpenImageFile.FileName);
+            }
         }
 
         //画像削除
@@ -218,12 +220,14 @@ namespace CarReportSystem {
         private void dgvCarReports_Click_1(object sender, EventArgs e) {
             btModifyReport.Enabled = true;
             btDereteReport.Enabled = true;
-            dttpDate.Value = (DateTime)dgvCarReports.CurrentRow.Cells[0].Value; //DateTime型にキャスト
-            cbAuthor.Text = dgvCarReports.CurrentRow.Cells[1].Value.ToString();
-            setSelectedMaker((CarReport.MakerGroup)dgvCarReports.CurrentRow.Cells[2].Value);
-            cbCarName.Text = dgvCarReports.CurrentRow.Cells[3].Value.ToString();
-            tbReport.Text = dgvCarReports.CurrentRow.Cells[4].Value.ToString();
-            ofdImageFileOpen.Image = (Image)dgvCarReports.CurrentRow.Cells[5].Value;
+            if (0 < dgvCarReports.RowCount) {
+                dttpDate.Value = (DateTime)dgvCarReports.CurrentRow.Cells[0].Value; //DateTime型にキャスト
+                cbAuthor.Text = dgvCarReports.CurrentRow.Cells[1].Value.ToString();
+                setSelectedMaker((CarReport.MakerGroup)dgvCarReports.CurrentRow.Cells[2].Value);
+                cbCarName.Text = dgvCarReports.CurrentRow.Cells[3].Value.ToString();
+                tbReport.Text = dgvCarReports.CurrentRow.Cells[4].Value.ToString();
+                ofdImageFileOpen.Image = (Image)dgvCarReports.CurrentRow.Cells[5].Value;
+            }
         }
 
 
@@ -238,6 +242,26 @@ namespace CarReportSystem {
         private void バージョン情報ToolStripMenuItem_Click(object sender, EventArgs e) {
             var vf = new VersionForm();
             vf.ShowDialog();    //モーダルダイアログとして表示
+        }
+
+        private void 色設定ToolStripMenuItem_Click(object sender, EventArgs e) {
+            if(cdColor.ShowDialog() == DialogResult.OK) {
+                BackColor = cdColor.Color;
+            }
+            /*cdColor.ShowDialog();
+            BackColor = cdColor.Color;*/
+        }
+
+        private void btScaleChange_Click(object sender, EventArgs e) {
+            //画像の大きさをPictureBoxに合わせる
+            //ofdImageFileOpen.SizeMode = PictureBoxSizeMode.StretchImage;
+            if(mode > 4) {
+                mode = 0;
+            }
+            ofdImageFileOpen.SizeMode = (PictureBoxSizeMode)mode;
+            mode++;
+
+
         }
 
 
