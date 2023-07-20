@@ -219,6 +219,12 @@ namespace CarReportSystem {
             btModifyReport.Enabled = false;     //マスクする
             btDereteReport.Enabled = false;
             tsInfoText.Text = "ここにメッセージを表示できます";
+            //設定ファイルを逆シリアル化して背景を設定
+            using(var set = XmlReader.Create("Settings.xml")) {
+                var serializer = new XmlSerializer(typeof(Settings));   //typeは型情報
+                settingss = serializer.Deserialize(set) as Settings;
+                BackColor = Color.FromArgb(settingss.MainFormColor);
+            }
         }
 
 
@@ -275,12 +281,18 @@ namespace CarReportSystem {
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e) {
             //設定ファイルのシリアル化
-            var novel = new Settings {
+            /*var novel = new Settings {
                 MainFormColor = cdColor.Color.ToArgb()
             };
             using(var set = XmlWriter.Create("Settings.xml")) {
                 var serializer = new XmlSerializer(novel.GetType());
                 serializer.Serialize(set,novel);
+            }*/
+
+            //先生ver
+            using (var set = XmlWriter.Create("Settings.xml")) {
+                var serializer = new XmlSerializer(settingss.GetType());
+                serializer.Serialize(set, settingss);
             }
         }
     }
