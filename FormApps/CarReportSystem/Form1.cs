@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CarReportSystem.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
+using System.Xml.Serialization;
 
 namespace CarReportSystem {
     public partial class Form1 : Form {
@@ -14,6 +17,9 @@ namespace CarReportSystem {
         //管理用データ
         BindingList<CarReport> CarReports = new BindingList<CarReport>();
         private int mode;
+
+        //設定情報保存
+        Settings settingss = new Settings();
 
         public Form1() {
             InitializeComponent();
@@ -247,6 +253,7 @@ namespace CarReportSystem {
         private void 色設定ToolStripMenuItem_Click(object sender, EventArgs e) {
             if(cdColor.ShowDialog() == DialogResult.OK) {
                 BackColor = cdColor.Color;
+                settingss.MainFormColor = cdColor.Color.ToArgb();
             }
             /*cdColor.ShowDialog();
             BackColor = cdColor.Color;*/
@@ -255,15 +262,26 @@ namespace CarReportSystem {
         private void btScaleChange_Click(object sender, EventArgs e) {
             //画像の大きさをPictureBoxに合わせる
             //ofdImageFileOpen.SizeMode = PictureBoxSizeMode.StretchImage;
-            if(mode > 4) {
+            mode = mode < 4 ? ((mode == 1) ? 3 : ++mode) : 0;   //AutoSize(2)を除外
+            //ofdImageFileOpen.SizeMode = mode < PictureBoxSizeMode.Zoom ? ((mode == PictureBoxSizeMode.StretchImage) ? PictureBoxSizeMode.CenterImage : ++mode) : PictureBoxSizeMode.Normal;   //AutoSize(2)を除外
+            /*if(mode > 4) {
                 mode = 0;
-            }
+            }*/
             ofdImageFileOpen.SizeMode = (PictureBoxSizeMode)mode;
             mode++;
 
 
         }
 
-
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e) {
+            //設定ファイルのシリアル化
+            var novel = new Settings {
+                MainFormColor = cdColor.Color.ToArgb()
+            };
+            using(var set = XmlWriter.Create("Settings.xml")) {
+                var serializer = new XmlSerializer(novel.GetType());
+                serializer.Serialize(set,novel);
+            }
+        }
     }
 }
