@@ -19,7 +19,7 @@ namespace CarReportSystem {
         private int mode;
 
         //設定情報保存
-        Settings settingss = new Settings();
+        Settings settings = new Settings();
 
         public Form1() {
             InitializeComponent();
@@ -210,20 +210,25 @@ namespace CarReportSystem {
         }
 
         private void Form1_Load(object sender, EventArgs e) {
+
+            tsInfoText.Text = "";   //情報表示領域のテキストを初期化
+            tsTimeDisp.Text = DateTime.Now.ToString("HH時mm分ss秒");
+            tmTimeUpdate.Start();
+
             dgvCarReports.Columns[5].Visible = false;   //画像項目非表示
             //理想は必要に応じて修正ボタンを押せないようにするForm1_Load(マスク処理)
             /*if(dgvCarReports.RowEnter) {
                 btModifyReport.Enabled = false;     //マスクする
                 btDereteReport.Enabled = false;
             }*/
-            btModifyReport.Enabled = false;     //マスクする
-            btDereteReport.Enabled = false;
+            btModifyReport.Enabled = false;     //修正ボタン無効
+            btDereteReport.Enabled = false;     //削除ボタン無効
             tsInfoText.Text = "ここにメッセージを表示できます";
             //設定ファイルを逆シリアル化して背景を設定
             using(var set = XmlReader.Create("Settings.xml")) {
                 var serializer = new XmlSerializer(typeof(Settings));   //typeは型情報
-                settingss = serializer.Deserialize(set) as Settings;
-                BackColor = Color.FromArgb(settingss.MainFormColor);
+                settings = serializer.Deserialize(set) as Settings;
+                BackColor = Color.FromArgb(settings.MainFormColor);
             }
         }
 
@@ -259,7 +264,7 @@ namespace CarReportSystem {
         private void 色設定ToolStripMenuItem_Click(object sender, EventArgs e) {
             if(cdColor.ShowDialog() == DialogResult.OK) {
                 BackColor = cdColor.Color;
-                settingss.MainFormColor = cdColor.Color.ToArgb();
+                settings.MainFormColor = cdColor.Color.ToArgb();
             }
             /*cdColor.ShowDialog();
             BackColor = cdColor.Color;*/
@@ -291,9 +296,13 @@ namespace CarReportSystem {
 
             //先生ver
             using (var set = XmlWriter.Create("Settings.xml")) {
-                var serializer = new XmlSerializer(settingss.GetType());
-                serializer.Serialize(set, settingss);
+                var serializer = new XmlSerializer(settings.GetType());
+                serializer.Serialize(set, settings);
             }
+        }
+
+        private void tmTimeUpdate_Tick(object sender, EventArgs e) {
+            tsTimeDisp.Text = DateTime.Now.ToString("HH時mm分ss秒");
         }
     }
 }
