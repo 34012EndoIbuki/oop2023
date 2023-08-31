@@ -4,7 +4,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,7 +18,7 @@ namespace CarReportSystem {
 
         //管理用データ
         BindingList<CarReport> CarReports = new BindingList<CarReport>();
-        private int mode;
+        private PictureBoxSizeMode mode;
 
         //設定情報保存
         Settings settings = new Settings();
@@ -51,14 +53,14 @@ namespace CarReportSystem {
             repo.Report = tbReport.Text;
             repo.CarImage = ofdImageFileOpen.Image;
 
-            //記録者コンボボックス履歴登録処理
+            /*//記録者コンボボックス履歴登録処理
             if (!cbAuthor.Items.Contains(cbAuthor.Text)) {
                 cbAuthor.Items.Add(cbAuthor.Text);
             }
             //車名コンボボックス履歴登録処理
             if (!cbCarName.Items.Contains(cbCarName.Text)) {
                 cbCarName.Items.Add(cbCarName.Text);
-            }
+            }*/
 
             //↑先生ver
             /*setCbAuther(cbAuthor.Text);
@@ -77,6 +79,19 @@ namespace CarReportSystem {
             CarReports.Add(repo);
             Clear();
         }
+
+        //先生ver コンボボックスの履歴登録処理
+        private void setCbAuthor(string author) {
+            if (!cbCarName.Items.Contains(author)) {
+                cbCarName.Items.Add(author);
+            }
+        }
+        private void setCbCarName(string carname) {
+            if (!cbCarName.Items.Contains(carname)) {
+                cbCarName.Items.Add(carname);
+            }
+        }
+        
 
         //追加を押した際にクリアする処理
         public void Clear() {
@@ -106,6 +121,7 @@ namespace CarReportSystem {
 
             //先生ver
             //CarReports.RemoveAt(dgvCarReports.CurrentRow.Index);
+            //editItemsClear();
 
             if (dgvCarReports.Rows.Count == 0) {
                 btModifyReport.Enabled = false;
@@ -208,12 +224,23 @@ namespace CarReportSystem {
         private void pbDeleteImage_Click(object sender, EventArgs e) {
             ofdImageFileOpen.Image = null;
         }
+        /*削除ボタンイベントハンドラ 先生var
+        private void btDeleteReport_Click(object sender, EventArgs e) {
+            CarReports.RemoveAt(dgvCarReports.CurrentRow.Index);
+            editItemsClear();
+        }
+        */
 
         private void Form1_Load(object sender, EventArgs e) {
 
             tsInfoText.Text = "";   //情報表示領域のテキストを初期化
+            //tsTimeDisp.Text = DateTime.Now.ToString("yyyy年MM月dd日 HH時mm分ss秒");
+            tsTimeDisp.BackColor = Color.Black;
+            tsTimeDisp.ForeColor = Color.White;
             tsTimeDisp.Text = DateTime.Now.ToString("HH時mm分ss秒");
             tmTimeUpdate.Start();
+
+            dgvCarReports.AlternatingRowsDefaultCellStyle.BackColor = Color.FloralWhite;//奇数行の色を上書き設定
 
             dgvCarReports.Columns[5].Visible = false;   //画像項目非表示
             //理想は必要に応じて修正ボタンを押せないようにするForm1_Load(マスク処理)
@@ -230,6 +257,17 @@ namespace CarReportSystem {
                 settings = serializer.Deserialize(set) as Settings;
                 BackColor = Color.FromArgb(settings.MainFormColor);
             }
+            /*先生ver
+             * try {
+                //設定ファイルを逆シリアル化して背景を設定
+                using (var reader = XmlReader.Create("settings.xml")) {
+                    var serializer = new XmlSerializer(typeof(Settings));
+                    settings = serializer.Deserialize(reader) as Settings;
+                    BackColor = Color.FromArgb(settings.MainFormColor);
+                }
+            } catch (Exception ex) {
+                MessageBox.Show(ex.Message);
+            }*/
         }
 
 
@@ -273,13 +311,25 @@ namespace CarReportSystem {
         private void btScaleChange_Click(object sender, EventArgs e) {
             //画像の大きさをPictureBoxに合わせる
             //ofdImageFileOpen.SizeMode = PictureBoxSizeMode.StretchImage;
-            mode = mode < 4 ? ((mode == 1) ? 3 : ++mode) : 0;   //AutoSize(2)を除外
+            //mode = mode < 4 ? ((mode == 1) ? 3 : ++mode) : 0;   //AutoSize(2)を除外
             //ofdImageFileOpen.SizeMode = mode < PictureBoxSizeMode.Zoom ? ((mode == PictureBoxSizeMode.StretchImage) ? PictureBoxSizeMode.CenterImage : ++mode) : PictureBoxSizeMode.Normal;   //AutoSize(2)を除外
             /*if(mode > 4) {
                 mode = 0;
             }*/
-            ofdImageFileOpen.SizeMode = (PictureBoxSizeMode)mode;
-            mode++;
+            //ofdImageFileOpen.SizeMode = (PictureBoxSizeMode)mode;
+            //mode++;
+            if(mode < PictureBoxSizeMode.Zoom) {
+                if (mode == PictureBoxSizeMode.StretchImage) {
+                    mode = PictureBoxSizeMode.CenterImage;
+                } else {
+                    ++mode;
+                }
+            }
+            else {
+                mode = PictureBoxSizeMode.Normal;
+            }
+
+            ofdImageFileOpen.SizeMode = mode;
 
 
         }
@@ -302,18 +352,44 @@ namespace CarReportSystem {
         }
 
         private void tmTimeUpdate_Tick(object sender, EventArgs e) {
-            tsTimeDisp.Text = DateTime.Now.ToString("HH時mm分ss秒");
+            tsTimeDisp.Text = DateTime.Now.ToString("yyyy年MM月dd日HH時mm分ss秒");
         }
 
         private void 開くOToolStripMenuItem_Click(object sender, EventArgs e) {
             if (ofdCarRepoOpen.ShowDialog() == DialogResult.OK) {
-
+                try {
+                    //バイナリ形式でシリアル化
+                    var bf = new BinaryFormatter();
+                    using (FileStream fs = File.Open(sfdCarRepoSave.FileName, FileMode.Create)) {
+                        bf.Serialize(fs, CarReports);
+                    }
+                }
+                catch (Exception ex) {
+                    MessageBox.Show(ex.Message);
+                }
             }
         }
 
         private void 保存SToolStripMenuItem_Click(object sender, EventArgs e) {
             if(sfdCarRepoSave.ShowDialog() == DialogResult.OK) {
+                try {
+                    //逆シリアル化でバイナリ形式を取り込む
+                    var bf = new BinaryFormatter();
+                    using (FileStream fs = File.Open(ofdCarRepoOpen.FileName, FileMode.Open, FileAccess.Read)) {
+                        CarReports = (BindingList<CarReport>)bf.Deserialize(fs);
+                        dgvCarReports.DataSource = null;
+                        dgvCarReports.DataSource = CarReports;
 
+                        Clear();//入力途中などのデータはすべてクリア
+                        dgvCarReports.Columns[5].Visible = false;   //画像項目非表示
+                        foreach (var carReport in CarReports) {
+                            setCbAuthor(carReport.Author);
+                            setCbCarName(carReport.CarName);
+                        }
+                    }
+                } catch (Exception ex) {
+                    MessageBox.Show(ex.Message);
+                }
             }
         }
     }
