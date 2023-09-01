@@ -232,6 +232,7 @@ namespace CarReportSystem {
         */
 
         private void Form1_Load(object sender, EventArgs e) {
+            
 
             tsInfoText.Text = "";   //情報表示領域のテキストを初期化
             //tsTimeDisp.Text = DateTime.Now.ToString("yyyy年MM月dd日 HH時mm分ss秒");
@@ -405,5 +406,12 @@ namespace CarReportSystem {
                 ofdImageFileOpen.Image = (Image)dgvCarReports.CurrentRow.Cells[5].Value;
             }
         }
+
+        private void btConnection_Click(object sender, EventArgs e) {
+            // TODO: このコード行はデータを 'infosys202303DataSet.CarReportTable' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
+            this.carReportTableTableAdapter.Fill(this.infosys202303DataSet.CarReportTable);
+        }
+
+
     }
 }
