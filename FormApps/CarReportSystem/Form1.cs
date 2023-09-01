@@ -272,7 +272,7 @@ namespace CarReportSystem {
 
 
         //dgvの行を選択
-        private void dgvCarReports_Click_1(object sender, EventArgs e) {
+        /*private void dgvCarReports_Click_1(object sender, EventArgs e) {
             btModifyReport.Enabled = true;
             btDereteReport.Enabled = true;
             if (0 < dgvCarReports.RowCount) {
@@ -283,7 +283,7 @@ namespace CarReportSystem {
                 tbReport.Text = dgvCarReports.CurrentRow.Cells[4].Value.ToString();
                 ofdImageFileOpen.Image = (Image)dgvCarReports.CurrentRow.Cells[5].Value;
             }
-        }
+        }*/
 
 
         
@@ -390,6 +390,19 @@ namespace CarReportSystem {
                 } catch (Exception ex) {
                     MessageBox.Show(ex.Message);
                 }
+            }
+        }
+
+        private void dgvCarReports_CellClick(object sender, DataGridViewCellEventArgs e) {
+            btModifyReport.Enabled = true;
+            btDereteReport.Enabled = true;
+            if (0 < dgvCarReports.RowCount) {
+                dttpDate.Value = (DateTime)dgvCarReports.CurrentRow.Cells[0].Value; //DateTime型にキャスト
+                cbAuthor.Text = dgvCarReports.CurrentRow.Cells[1].Value.ToString();
+                setSelectedMaker((CarReport.MakerGroup)dgvCarReports.CurrentRow.Cells[2].Value);
+                cbCarName.Text = dgvCarReports.CurrentRow.Cells[3].Value.ToString();
+                tbReport.Text = dgvCarReports.CurrentRow.Cells[4].Value.ToString();
+                ofdImageFileOpen.Image = (Image)dgvCarReports.CurrentRow.Cells[5].Value;
             }
         }
     }
