@@ -21,7 +21,7 @@ namespace CarReportSystem {
         private PictureBoxSizeMode mode;
 
         //設定情報保存
-        Settings settings = new Settings();
+        Settings settings = Settings.getInstance();
 
         public Form1() {
             InitializeComponent();
