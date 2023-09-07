@@ -392,5 +392,9 @@ namespace CarReportSystem {
                 }
             }
         }
+
+        private void btConnectOn_Click(object sender, EventArgs e) {
+            this.CarReportTableTableAdapter
+        }
     }
 }
