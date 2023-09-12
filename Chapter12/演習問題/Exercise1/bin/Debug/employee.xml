@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfEmployee xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/Exercise01">
  <Employee>
-  <HireDate>2023-09-04T14:30:08.1191464+09:00</HireDate>
+  <HireDate>2023-09-12T15:04:17.8537124+09:00</HireDate>
   <Id>1</Id>
   <Name>pc</Name>
  </Employee>
