@@ -1,0 +1,14 @@
+C:\Users\infosys\source\repos\oop2023\Chapter13\SampleEntityFramework\obj\Debug\SampleEntityFramework.csproj.AssemblyReference.cache
+C:\Users\infosys\source\repos\oop2023\Chapter13\SampleEntityFramework\obj\Debug\SampleEntityFramework.csproj.CoreCompileInputs.cache
+C:\Users\infosys\source\repos\oop2023\Chapter13\SampleEntityFramework\bin\Debug\SampleEntityFramework.exe.config
+C:\Users\infosys\source\repos\oop2023\Chapter13\SampleEntityFramework\bin\Debug\SampleEntityFramework.exe
+C:\Users\infosys\source\repos\oop2023\Chapter13\SampleEntityFramework\bin\Debug\SampleEntityFramework.pdb
+C:\Users\infosys\source\repos\oop2023\Chapter13\SampleEntityFramework\bin\Debug\EntityFramework.dll
+C:\Users\infosys\source\repos\oop2023\Chapter13\SampleEntityFramework\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\infosys\source\repos\oop2023\Chapter13\SampleEntityFramework\bin\Debug\EntityFramework.xml
+C:\Users\infosys\source\repos\oop2023\Chapter13\SampleEntityFramework\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\infosys\source\repos\oop2023\Chapter13\SampleEntityFramework\bin\Debug\ja\EntityFramework.resources.dll
+C:\Users\infosys\source\repos\oop2023\Chapter13\SampleEntityFramework\bin\Debug\ja\EntityFramework.SqlServer.resources.dll
+C:\Users\infosys\source\repos\oop2023\Chapter13\SampleEntityFramework\obj\Debug\SampleEntityFramework.csproj.CopyComplete
+C:\Users\infosys\source\repos\oop2023\Chapter13\SampleEntityFramework\obj\Debug\SampleEntityFramework.exe
+C:\Users\infosys\source\repos\oop2023\Chapter13\SampleEntityFramework\obj\Debug\SampleEntityFramework.pdb
