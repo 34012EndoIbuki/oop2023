@@ -10,6 +10,28 @@ using System.Threading.Tasks;
 namespace SampleEntityFramework {
     class Program {
         static void Main(string[] args) {
+
+            Console.WriteLine("# 1.1");
+            Exercise1_1();
+
+            Console.WriteLine();
+            Console.WriteLine("# 1.2");
+            Exercise1_2();
+
+            Console.WriteLine();
+            Console.WriteLine("# 1.3");
+            Exercise1_3();
+
+            Console.WriteLine();
+            Console.WriteLine("# 1.4");
+            Exercise1_4();
+
+            Console.WriteLine();
+            Console.WriteLine("# 1.5");
+            Exercise1_5();
+
+            Console.ReadLine();
+
             //InsertBooks();
             //DisplayAllBooks();
             //AddAuthors();
@@ -21,7 +43,7 @@ namespace SampleEntityFramework {
                 Console.WriteLine($"{book.Title}{book.Auther.Name}");
             }*/
 
-            using(var db = new BooksDbContext()) {
+            using (var db = new BooksDbContext()) {
 
                 db.Database.Log = sql => { Debug.Write(sql); };
 
@@ -35,6 +57,27 @@ namespace SampleEntityFramework {
             Console.ReadLine();
             Console.WriteLine();
         }
+
+        private static void Exercise1_1() {
+            throw new NotImplementedException();
+        }
+
+        private static void Exercise1_2() {
+            throw new NotImplementedException();
+        }
+
+        private static void Exercise1_3() {
+            throw new NotImplementedException();
+        }
+
+        private static void Exercise1_4() {
+            throw new NotImplementedException();
+        }
+
+        private static void Exercise1_5() {
+            throw new NotImplementedException();
+        }
+
         // List 13-5
         //Idは自動
         static void InsertBooks() {
