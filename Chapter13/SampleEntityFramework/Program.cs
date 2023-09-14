@@ -11,39 +11,11 @@ namespace SampleEntityFramework {
     class Program {
         static void Main(string[] args) {
 
-            Console.WriteLine("# 1.1");
-            Exercise1_1();
-
-            Console.WriteLine();
-            Console.WriteLine("# 1.2");
-            Exercise1_2();
-
-            Console.WriteLine();
-            Console.WriteLine("# 1.3");
-            Exercise1_3();
-
-            Console.WriteLine();
-            Console.WriteLine("# 1.4");
-            Exercise1_4();
-
-            Console.WriteLine();
-            Console.WriteLine("# 1.5");
-            Exercise1_5();
-
-            Console.ReadLine();
-
-            //InsertBooks();
-            //DisplayAllBooks();
-            //AddAuthors();
-            //AddBooks();
-            //UpdateBook();
-            //DeleteBook();
-
             /*foreach(var book in GetBooks()) {
                 Console.WriteLine($"{book.Title}{book.Auther.Name}");
             }*/
 
-            using (var db = new BooksDbContext()) {
+            /*using (var db = new BooksDbContext()) {
 
                 db.Database.Log = sql => { Debug.Write(sql); };
 
@@ -55,27 +27,113 @@ namespace SampleEntityFramework {
 
             Console.Write("データを挿入しました。続けるにはEnterキーを押してください");
             Console.ReadLine();
+            Console.WriteLine();*/
+
+            //InsertBooks();
+            //DisplayAllBooks();
+            //AddAuthors();
+            //AddBooks();
+            //UpdateBook();
+            //DeleteBook();
+
+            Console.WriteLine("# 1.1");
+            //Exercise1_1();
+
             Console.WriteLine();
+            Console.WriteLine("# 1.2");
+            //Exercise1_2();
+
+            Console.WriteLine();
+            Console.WriteLine("# 1.3");
+            //Exercise1_3();
+
+            Console.WriteLine();
+            Console.WriteLine("# 1.4");
+            //Exercise1_4();
+
+            Console.WriteLine();
+            Console.WriteLine("# 1.5");
+            //Exercise1_5();
+
+            Console.ReadLine();
         }
 
         private static void Exercise1_1() {
-            throw new NotImplementedException();
+            using (var db = new BooksDbContext()) {
+                var ExeAut1 = new Auther {
+                    Birthday = new DateTime(1888, 12, 26),
+                    Gender = "M",
+                    Name = "菊池寛",
+                };
+                db.Authers.Add(ExeAut1);
+                var ExeAut2 = new Auther {
+                    Birthday = new DateTime(1899, 6, 14),
+                    Gender = "M",
+                    Name = "川端康成",
+                };
+                db.Authers.Add(ExeAut2);
+                db.SaveChanges();   //データベースを更新
+            }
+
+            using (var db = new BooksDbContext()) {
+                var Exeaut1 = db.Authers.Single(a => a.Name == "与謝野晶子");
+                var ExeBoo1 = new book {
+                    Title = "こころ",
+                    PublishedYear = 1991,
+                    Auther = Exeaut1,
+                };
+                db.Books.Add(ExeBoo1);
+            
+                var Exeaut2 = db.Authers.Single(a => a.Name == "川端康成");
+                var ExeBoo2 = new book {
+                    Title = "伊豆の踊子",
+                    PublishedYear = 2003,
+                    Auther = Exeaut2,
+                };
+                db.Books.Add(ExeBoo2);
+            
+                var Exeaut3 = db.Authers.Single(a => a.Name == "菊池寛");
+                var ExeBoo3 = new book {
+                    Title = "真珠婦人",
+                    PublishedYear = 2002,
+                    Auther = Exeaut3,
+                };
+                db.Books.Add(ExeBoo3);
+            
+                var Exeaut4 = db.Authers.Single(a => a.Name == "宮沢賢治");
+                var ExeBoo4 = new book {
+                    Title = "注文の多い料理店",
+                    PublishedYear = 2000,
+                    Auther = Exeaut4,
+                };
+                db.Books.Add(ExeBoo4);
+                db.SaveChanges();   //データベースを更新
+            }
         }
 
         private static void Exercise1_2() {
-            throw new NotImplementedException();
+            using (var db = new BooksDbContext()) {
+                var books = db.Books.Include(nameof(Auther)).ToList();
+                foreach (var book in books) {
+                    Console.WriteLine($"著者:{book.Auther.Name} タイトル:{book.Title} 発行年:{book.PublishedYear}");
+                }
+            }
         }
-
         private static void Exercise1_3() {
-            throw new NotImplementedException();
-        }
+            using (var db = new BooksDbContext()) {
+                var books = db.Books.Where(a => a.Title.Length == db.Books.Max(b => b.Title.Length));
 
+                foreach (var book in books) {
+                    Console.WriteLine($"タイトル:{book.Title}");
+                }
+            }
+        }
         private static void Exercise1_4() {
-            throw new NotImplementedException();
+
         }
 
         private static void Exercise1_5() {
-            throw new NotImplementedException();
+
         }
 
         // List 13-5
@@ -188,5 +246,11 @@ namespace SampleEntityFramework {
                 }
             }
         }
+
+        /*static IEnumerable<book> ExeGetBooks() {
+            using (var db = new BooksDbContext()) {
+                return db.Books.Where(book => book.Auther.Name.StartsWith(""))
+            }
+        }*/
     }
 }
