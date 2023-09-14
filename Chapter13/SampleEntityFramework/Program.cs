@@ -53,7 +53,7 @@ namespace SampleEntityFramework {
 
             Console.WriteLine();
             Console.WriteLine("# 1.5");
-            //Exercise1_5();
+            Exercise1_5();
 
             Console.ReadLine();
         }
@@ -129,11 +129,21 @@ namespace SampleEntityFramework {
             }
         }
         private static void Exercise1_4() {
-
+            using (var db = new BooksDbContext()) {
+                var books = db.Books.OrderBy(a => a.PublishedYear).Take(3).ToList();
+                foreach(var book in books) {
+                    Console.WriteLine($"著者:{book.Auther.Name} タイトル:{book.Title}");
+                }
+            }
         }
 
         private static void Exercise1_5() {
-
+            using (var db = new BooksDbContext()) {
+                var books = db.Books.Include(nameof(Auther)).OrderByDescending(a => a.Auther.Birthday).ToList();
+                foreach (var book in books) {
+                    Console.WriteLine($"著者:{book.Auther.Name} タイトル:{book.Title} 発行年:{book.PublishedYear}");
+                }
+            }
         }
 
         // List 13-5
