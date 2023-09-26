@@ -1,0 +1,10 @@
+C:\Users\infosys\source\repos\oop2023\Chapter14\Section01\obj\Debug\Section01.csproj.AssemblyReference.cache
+C:\Users\infosys\source\repos\oop2023\Chapter14\Section01\obj\Debug\Section01.Form1.resources
+C:\Users\infosys\source\repos\oop2023\Chapter14\Section01\obj\Debug\Section01.Properties.Resources.resources
+C:\Users\infosys\source\repos\oop2023\Chapter14\Section01\obj\Debug\Section01.csproj.GenerateResource.cache
+C:\Users\infosys\source\repos\oop2023\Chapter14\Section01\obj\Debug\Section01.csproj.CoreCompileInputs.cache
+C:\Users\infosys\source\repos\oop2023\Chapter14\Section01\bin\Debug\Section01.exe.config
+C:\Users\infosys\source\repos\oop2023\Chapter14\Section01\bin\Debug\Section01.exe
+C:\Users\infosys\source\repos\oop2023\Chapter14\Section01\bin\Debug\Section01.pdb
+C:\Users\infosys\source\repos\oop2023\Chapter14\Section01\obj\Debug\Section01.exe
+C:\Users\infosys\source\repos\oop2023\Chapter14\Section01\obj\Debug\Section01.pdb

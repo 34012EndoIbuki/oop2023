@@ -41,15 +41,15 @@ namespace SampleEntityFramework {
 
             Console.WriteLine();
             Console.WriteLine("# 1.2");
-            //Exercise1_2();
+            Exercise1_2();
 
             Console.WriteLine();
             Console.WriteLine("# 1.3");
-            //Exercise1_3();
+            Exercise1_3();
 
             Console.WriteLine();
             Console.WriteLine("# 1.4");
-            //Exercise1_4();
+            Exercise1_4();
 
             Console.WriteLine();
             Console.WriteLine("# 1.5");
@@ -83,7 +83,7 @@ namespace SampleEntityFramework {
                     Auther = Exeaut1,
                 };
                 db.Books.Add(ExeBoo1);
-            
+
                 var Exeaut2 = db.Authers.Single(a => a.Name == "川端康成");
                 var ExeBoo2 = new book {
                     Title = "伊豆の踊子",
