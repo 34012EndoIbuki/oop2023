@@ -1,0 +1,10 @@
+C:\Users\infosys\source\repos\oop2023\FormApps\RssReader\bin\Debug\RssReader.exe.config
+C:\Users\infosys\source\repos\oop2023\FormApps\RssReader\bin\Debug\RssReader.exe
+C:\Users\infosys\source\repos\oop2023\FormApps\RssReader\bin\Debug\RssReader.pdb
+C:\Users\infosys\source\repos\oop2023\FormApps\RssReader\obj\Debug\RssReader.csproj.AssemblyReference.cache
+C:\Users\infosys\source\repos\oop2023\FormApps\RssReader\obj\Debug\RssReader.Form1.resources
+C:\Users\infosys\source\repos\oop2023\FormApps\RssReader\obj\Debug\RssReader.Properties.Resources.resources
+C:\Users\infosys\source\repos\oop2023\FormApps\RssReader\obj\Debug\RssReader.csproj.GenerateResource.cache
+C:\Users\infosys\source\repos\oop2023\FormApps\RssReader\obj\Debug\RssReader.csproj.CoreCompileInputs.cache
+C:\Users\infosys\source\repos\oop2023\FormApps\RssReader\obj\Debug\RssReader.exe
+C:\Users\infosys\source\repos\oop2023\FormApps\RssReader\obj\Debug\RssReader.pdb
