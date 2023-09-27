@@ -1,0 +1,7 @@
+C:\Users\infosys\source\repos\oop2023\Chapter14\Section04\bin\Debug\Section04.exe.config
+C:\Users\infosys\source\repos\oop2023\Chapter14\Section04\bin\Debug\Section04.exe
+C:\Users\infosys\source\repos\oop2023\Chapter14\Section04\bin\Debug\Section04.pdb
+C:\Users\infosys\source\repos\oop2023\Chapter14\Section04\obj\Debug\Section04.csproj.AssemblyReference.cache
+C:\Users\infosys\source\repos\oop2023\Chapter14\Section04\obj\Debug\Section04.csproj.CoreCompileInputs.cache
+C:\Users\infosys\source\repos\oop2023\Chapter14\Section04\obj\Debug\Section04.exe
+C:\Users\infosys\source\repos\oop2023\Chapter14\Section04\obj\Debug\Section04.pdb
