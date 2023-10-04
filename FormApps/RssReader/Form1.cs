@@ -22,6 +22,9 @@ namespace RssReader {
                 MessageBox.Show("値が未入力です");
                 return;
             }
+
+            lbRssTitle.Items.Clear();   //リストボックスクリア
+
             using (var wc = new WebClient()) {
                 var url = wc.OpenRead(tbUrl.Text);
                 XDocument xdoc = XDocument.Load(url);   //Xmlデータ取得
@@ -65,8 +68,12 @@ namespace RssReader {
             wbBrowser.Navigate(ItemDatas[lbRssTitle.SelectedIndex].Link);
         }
 
-        private void tbUrl_TextChanged(object sender, EventArgs e) {
-            
+        private void btAdd_Click(object sender, EventArgs e) {
+            var addurl = new ItemData();
+            addurl.Link = tbUrl.Text;
+
+            ItemDatas.Add(addurl);
+            dgvUrl.Columns[0].HeaderText = "URL";
         }
     }
 }
