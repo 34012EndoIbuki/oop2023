@@ -14,7 +14,7 @@ namespace Exercise02 {
 
         private static void Pickup3DigitNumber(string file) {
             foreach (var lines in File.ReadLines(file)) {
-                var buffer = lines.Split(' ');
+                var buffer = lines.Split(' ');  //Splitは使わなくてもできるので使わないほうがいい
                 foreach (var line in buffer) {
                     var match = Regex.IsMatch(line, @"^\d{3,}$");
                     if (match == true) {
@@ -24,5 +24,15 @@ namespace Exercise02 {
 
             }
         }
+        
+        //先生ver
+        /*private static void Pickup3DigitNumber(string file) {
+            foreach (var lines in File.ReadLines(file)) {
+                var matches = Regex.Matches(lines, @"\b\d{3,}\b");
+                foreach (Match m in matches) {
+                    Console.WriteLine(m.Value);
+                }
+            }
+        }*/
     }
 }
