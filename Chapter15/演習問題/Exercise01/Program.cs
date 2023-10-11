@@ -34,6 +34,11 @@ namespace Exercise01 {
         }
 
         private static void Exercise1_3() {
+            var minyear = Library.Books.Min(b => b.PublishedYear);
+            var maxyear = Library.Books.Max(b => b.PublishedYear);
+            for (int i = minyear; minyear <= maxyear; i++) {
+
+            }
         }
 
         private static void Exercise1_4() {
