@@ -30,11 +30,12 @@ namespace RssReader {
             this.wbBrowser = new System.Windows.Forms.WebBrowser();
             this.btAdd = new System.Windows.Forms.Button();
             this.dgvUrl = new System.Windows.Forms.DataGridView();
-            this.statasLabelDisp = new System.Windows.Forms.StatusStrip();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tsInfoText = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUrl)).BeginInit();
-            this.statasLabelDisp.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tbUrl
@@ -101,16 +102,11 @@ namespace RssReader {
             this.dgvUrl.TabIndex = 5;
             this.dgvUrl.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUrl_CellClick);
             // 
-            // statasLabelDisp
+            // tsInfoText
             // 
-            this.statasLabelDisp.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsInfoText});
-            this.statasLabelDisp.Location = new System.Drawing.Point(0, 597);
-            this.statasLabelDisp.Name = "statasLabelDisp";
-            this.statasLabelDisp.Size = new System.Drawing.Size(800, 22);
-            this.statasLabelDisp.TabIndex = 6;
-            this.statasLabelDisp.Text = "statusStrip1";
-            this.statasLabelDisp.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.statasLabelDisp_ItemClicked);
+            this.tsInfoText.Name = "tsInfoText";
+            this.tsInfoText.Size = new System.Drawing.Size(42, 17);
+            this.tsInfoText.Text = "テキスト";
             // 
             // toolStrip1
             // 
@@ -120,19 +116,29 @@ namespace RssReader {
             this.toolStrip1.TabIndex = 7;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // tsInfoText
+            // statusStrip1
             // 
-            this.tsInfoText.Name = "tsInfoText";
-            this.tsInfoText.Size = new System.Drawing.Size(42, 17);
-            this.tsInfoText.Text = "テキスト";
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 597);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(800, 22);
+            this.statusStrip1.TabIndex = 8;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(118, 17);
+            this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 619);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.statasLabelDisp);
             this.Controls.Add(this.dgvUrl);
             this.Controls.Add(this.btAdd);
             this.Controls.Add(this.wbBrowser);
@@ -143,8 +149,8 @@ namespace RssReader {
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUrl)).EndInit();
-            this.statasLabelDisp.ResumeLayout(false);
-            this.statasLabelDisp.PerformLayout();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -161,6 +167,8 @@ namespace RssReader {
         private System.Windows.Forms.StatusStrip statasLabelDisp;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripStatusLabel tsInfoText;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
     }
 }
 

@@ -72,6 +72,11 @@ namespace RssReader {
             wbBrowser.Navigate(ItemDatas[lbRssTitle.SelectedIndex].Link);
         }
 
+        private void statasLabelDisp(string msg = "") {
+            //MessageBox.Show(msg);     //ポップアップ表示
+            tsInfoText.Text = msg;
+        }
+
         private void btAdd_Click(object sender, EventArgs e) {
             /*var addurl = new ItemData();
             addurl.Link = tbUrl.Text;
@@ -82,10 +87,12 @@ namespace RssReader {
             //DataGridViewLinkColumnの作成
 
             statasLabelDisp();
-            if(tbUrl == null) {
+            if (tbUrl == null) {
                 statasLabelDisp("urlを入力してください");    //tsInfoText.Text = "記録者を入力してください";
                 return;
             }
+
+
 
             DataTable table = new DataTable("Table");
             table.Rows.Add("髪");
@@ -108,6 +115,8 @@ namespace RssReader {
             dgvUrl.Columns.Add(column);
         }
 
+        
+
         private void dgvUrl_CellClick(object sender, DataGridViewCellEventArgs e) {
             DataGridView dgv = (DataGridView)sender;
             //"Link"列ボタンクリック
@@ -119,11 +128,6 @@ namespace RssReader {
                 (DataGridViewLinkCell)dgv[e.ColumnIndex, e.RowIndex];
                 cell.LinkVisited = true;
             }
-        }
-
-        private void statasLabelDisp_ItemClicked(object sender, ToolStripItemClickedEventArgs e) {
-            //MessageBox.Show(msg);     //ポップアップ表示
-            tsInfoText.Text = msg;
         }
 
     }
