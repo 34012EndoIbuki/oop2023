@@ -17,6 +17,10 @@ namespace RssReader {
             
         }
 
+        private void Form1_Load(object sender, EventArgs e) {
+            tsInfoText.Text = "";   //情報表示領域のテキストを初期化
+        }
+
         private void btGet_Click(object sender, EventArgs e) {
             if ((tbUrl.Text == "")) {
                 MessageBox.Show("値が未入力です");
@@ -69,11 +73,58 @@ namespace RssReader {
         }
 
         private void btAdd_Click(object sender, EventArgs e) {
-            var addurl = new ItemData();
+            /*var addurl = new ItemData();
             addurl.Link = tbUrl.Text;
 
             ItemDatas.Add(addurl);
-            dgvUrl.Columns[0].HeaderText = "URL";
+            dgvUrl.Columns[0].HeaderText = "URL";*/
+
+            //DataGridViewLinkColumnの作成
+
+            statasLabelDisp();
+            if(tbUrl == null) {
+                statasLabelDisp("urlを入力してください");    //tsInfoText.Text = "記録者を入力してください";
+                return;
+            }
+
+            DataTable table = new DataTable("Table");
+            table.Rows.Add("髪");
+            dgvUrl.DataSource = table;
+
+
+            DataGridViewLinkColumn column = new DataGridViewLinkColumn();
+
+            //列の名前を設定
+            column.Name = "Link";
+            //全てのリンクに"詳細閲覧"と表示する
+            column.UseColumnTextForLinkValue = true;
+            column.Text = "詳細閲覧";
+            //マウスポインタがリンク上にあるときだけ下線をつける
+            column.LinkBehavior = LinkBehavior.HoverUnderline;
+            //自動的に訪問済みになるようにする
+            //デフォルトでTrue
+            column.TrackVisitedState = true;
+            //DataGridViewに追加する
+            dgvUrl.Columns.Add(column);
         }
+
+        private void dgvUrl_CellClick(object sender, DataGridViewCellEventArgs e) {
+            DataGridView dgv = (DataGridView)sender;
+            //"Link"列ボタンクリック
+            if (dgv.Columns[e.ColumnIndex].Name == "Link") {
+                MessageBox.Show(e.RowIndex.ToString() +
+                "行リンククリック。");
+                //訪問済み
+                DataGridViewLinkCell cell =
+                (DataGridViewLinkCell)dgv[e.ColumnIndex, e.RowIndex];
+                cell.LinkVisited = true;
+            }
+        }
+
+        private void statasLabelDisp_ItemClicked(object sender, ToolStripItemClickedEventArgs e) {
+            //MessageBox.Show(msg);     //ポップアップ表示
+            tsInfoText.Text = msg;
+        }
+
     }
 }

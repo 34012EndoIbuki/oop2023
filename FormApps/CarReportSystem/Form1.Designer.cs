@@ -71,6 +71,7 @@ namespace CarReportSystem {
             this.ofdCarRepoOpen = new System.Windows.Forms.OpenFileDialog();
             this.sfdCarRepoSave = new System.Windows.Forms.SaveFileDialog();
             this.btConnectOn = new System.Windows.Forms.Button();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.gbMaker.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCarReports)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ofdImageFileOpen)).BeginInit();
@@ -327,6 +328,7 @@ namespace CarReportSystem {
             this.ofdImageFileOpen.Size = new System.Drawing.Size(286, 286);
             this.ofdImageFileOpen.TabIndex = 11;
             this.ofdImageFileOpen.TabStop = false;
+            this.ofdImageFileOpen.Click += new System.EventHandler(this.ofdImageFileOpen_Click);
             // 
             // btModifyReport
             // 
@@ -487,11 +489,20 @@ namespace CarReportSystem {
             this.btConnectOn.UseVisualStyleBackColor = true;
             this.btConnectOn.Click += new System.EventHandler(this.btConnectOn_Click);
             // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Location = new System.Drawing.Point(0, 24);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(1093, 25);
+            this.toolStrip1.TabIndex = 21;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1093, 645);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.btConnectOn);
             this.Controls.Add(this.btScaleChange);
             this.Controls.Add(this.statusDisp);
@@ -584,6 +595,7 @@ namespace CarReportSystem {
         private System.Windows.Forms.OpenFileDialog ofdCarRepoOpen;
         private System.Windows.Forms.SaveFileDialog sfdCarRepoSave;
         private System.Windows.Forms.Button btConnectOn;
+        private System.Windows.Forms.ToolStrip toolStrip1;
     }
 }
 

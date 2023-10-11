@@ -30,7 +30,11 @@ namespace RssReader {
             this.wbBrowser = new System.Windows.Forms.WebBrowser();
             this.btAdd = new System.Windows.Forms.Button();
             this.dgvUrl = new System.Windows.Forms.DataGridView();
+            this.statasLabelDisp = new System.Windows.Forms.StatusStrip();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.tsInfoText = new System.Windows.Forms.ToolStripStatusLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUrl)).BeginInit();
+            this.statasLabelDisp.SuspendLayout();
             this.SuspendLayout();
             // 
             // tbUrl
@@ -89,17 +93,46 @@ namespace RssReader {
             // dgvUrl
             // 
             this.dgvUrl.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvUrl.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.dgvUrl.Location = new System.Drawing.Point(405, 61);
             this.dgvUrl.Name = "dgvUrl";
             this.dgvUrl.RowTemplate.Height = 21;
             this.dgvUrl.Size = new System.Drawing.Size(370, 292);
             this.dgvUrl.TabIndex = 5;
+            this.dgvUrl.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUrl_CellClick);
+            // 
+            // statasLabelDisp
+            // 
+            this.statasLabelDisp.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsInfoText});
+            this.statasLabelDisp.Location = new System.Drawing.Point(0, 597);
+            this.statasLabelDisp.Name = "statasLabelDisp";
+            this.statasLabelDisp.Size = new System.Drawing.Size(800, 22);
+            this.statasLabelDisp.TabIndex = 6;
+            this.statasLabelDisp.Text = "statusStrip1";
+            this.statasLabelDisp.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.statasLabelDisp_ItemClicked);
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(800, 25);
+            this.toolStrip1.TabIndex = 7;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // tsInfoText
+            // 
+            this.tsInfoText.Name = "tsInfoText";
+            this.tsInfoText.Size = new System.Drawing.Size(42, 17);
+            this.tsInfoText.Text = "テキスト";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 619);
+            this.Controls.Add(this.toolStrip1);
+            this.Controls.Add(this.statasLabelDisp);
             this.Controls.Add(this.dgvUrl);
             this.Controls.Add(this.btAdd);
             this.Controls.Add(this.wbBrowser);
@@ -108,7 +141,10 @@ namespace RssReader {
             this.Controls.Add(this.tbUrl);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUrl)).EndInit();
+            this.statasLabelDisp.ResumeLayout(false);
+            this.statasLabelDisp.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -122,6 +158,9 @@ namespace RssReader {
         private System.Windows.Forms.WebBrowser wbBrowser;
         private System.Windows.Forms.Button btAdd;
         private System.Windows.Forms.DataGridView dgvUrl;
+        private System.Windows.Forms.StatusStrip statasLabelDisp;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel tsInfoText;
     }
 }
 
