@@ -54,7 +54,8 @@ namespace Exercise01 {
         }
 
         private static void Exercise1_4() {
-            var orderyear = Library.Books.GroupBy(b => b.PublishedYear).OrderByDescending(b => b.Key);
+            var orderyear = Library.Books.GroupBy(b => b.PublishedYear)
+                .OrderByDescending(b => b.Key);
             foreach(var g in orderyear) {
                 Console.WriteLine($"{ g.Key}");
                 foreach(var book in g.OrderByDescending(b => b.Price)) {
@@ -64,9 +65,30 @@ namespace Exercise01 {
         }
 
         private static void Exercise1_5() {
+            var names = Library.Books.Where(b => b.PublishedYear == 2016)
+                .Join(Library.Categories,
+                    book => book.CategoryId,
+                    category => category.Id,
+                    (book,category) => category.Name).Distinct();
+            foreach(var name in names) {
+                Console.WriteLine(name);
+                
+            }
+
         }
 
         private static void Exercise1_6() {
+            var groups = Library.Categories
+                            .GroupJoin(Library.Books,
+                                c => c.Id,
+                                b => b.CategoryId,
+                                (c, books) => new { Category = c.Name, Books = books });
+            foreach(var group in groups.OrderBy( g => g.Category)) {
+                Console.WriteLine($"{group.Category}");
+                foreach(var book in group.Books) {
+                    Console.WriteLine($"    {book.Title}({book.PublishedYear}年)");
+                }
+            }
         }
 
         private static void Exercise1_7() {
