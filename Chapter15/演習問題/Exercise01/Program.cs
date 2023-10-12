@@ -36,9 +36,15 @@ namespace Exercise01 {
         private static void Exercise1_3() {
             var minyear = Library.Books.Min(b => b.PublishedYear);
             var maxyear = Library.Books.Max(b => b.PublishedYear);
-            for (int i = minyear; minyear <= maxyear; i++) {
-
+            var count = 0;
+            //Console.WriteLine(maxyear);
+            //Console.WriteLine(minyear);
+            for (int i = minyear; i <= maxyear; i++) {
+                count = Library.Books.Count(b => b.PublishedYear == i);
+                Console.WriteLine(i + "年:"+count + "籍");
             }
+
+            //var groups = Library.Books.GroupBy(b => b.PublishedYear).OrderBy(g => g.Key);
         }
 
         private static void Exercise1_4() {
