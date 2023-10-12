@@ -40,14 +40,17 @@ namespace Exercise01 {
             //Console.WriteLine(maxyear);
             //Console.WriteLine(minyear);
             for (int i = minyear; i <= maxyear; i++) {
-                count = Library.Books.Count(b => b.PublishedYear == i);
-                Console.WriteLine(i + "年:"+count + "籍");
+                /*count = Library.Books.Count(b => b.PublishedYear == i);
+                Console.WriteLine(i + "年:"+count + "籍");*/
+                Console.WriteLine(i + $"年:{Library.Books.Count(b => b.PublishedYear == i)}");
             }
 
             //var groups = Library.Books.GroupBy(b => b.PublishedYear).OrderBy(g => g.Key);
+
         }
 
         private static void Exercise1_4() {
+
         }
 
         private static void Exercise1_5() {
