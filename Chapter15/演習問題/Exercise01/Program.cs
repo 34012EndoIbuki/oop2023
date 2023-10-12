@@ -34,23 +34,33 @@ namespace Exercise01 {
         }
 
         private static void Exercise1_3() {
-            var minyear = Library.Books.Min(b => b.PublishedYear);
+            /*var minyear = Library.Books.Min(b => b.PublishedYear);
             var maxyear = Library.Books.Max(b => b.PublishedYear);
             var count = 0;
             //Console.WriteLine(maxyear);
             //Console.WriteLine(minyear);
             for (int i = minyear; i <= maxyear; i++) {
-                /*count = Library.Books.Count(b => b.PublishedYear == i);
-                Console.WriteLine(i + "年:"+count + "籍");*/
+                *//*count = Library.Books.Count(b => b.PublishedYear == i);
+                Console.WriteLine(i + "年:"+count + "籍");*//*
                 Console.WriteLine(i + $"年:{Library.Books.Count(b => b.PublishedYear == i)}");
-            }
+            }*/
 
-            //var groups = Library.Books.GroupBy(b => b.PublishedYear).OrderBy(g => g.Key);
+            var groups = Library.Books.GroupBy(b => b.PublishedYear).OrderBy(g => g.Key);
+            foreach(var g in groups) {
+                Console.WriteLine("{0}年:{1}籍", g.Key, $"{Library.Books.Count(b => b.PublishedYear == g.Key)}");
+                //Console.WriteLine("{0}年:{1}籍", g.Key, g.Count());
+            }
 
         }
 
         private static void Exercise1_4() {
-
+            var orderyear = Library.Books.GroupBy(b => b.PublishedYear).OrderByDescending(b => b.Key);
+            foreach(var g in orderyear) {
+                Console.WriteLine($"{ g.Key}");
+                foreach(var book in g.OrderByDescending(b => b.Price)) {
+                    Console.WriteLine($"{book}");
+                }
+            }
         }
 
         private static void Exercise1_5() {
