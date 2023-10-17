@@ -1,0 +1,10 @@
+C:\Users\infosys\source\repos\oop2023\Chapter17\TemplateMethod\LineCounter\bin\Debug\LineCounter.exe.config
+C:\Users\infosys\source\repos\oop2023\Chapter17\TemplateMethod\LineCounter\bin\Debug\LineCounter.exe
+C:\Users\infosys\source\repos\oop2023\Chapter17\TemplateMethod\LineCounter\bin\Debug\LineCounter.pdb
+C:\Users\infosys\source\repos\oop2023\Chapter17\TemplateMethod\LineCounter\obj\Debug\LineCounter.csproj.CoreCompileInputs.cache
+C:\Users\infosys\source\repos\oop2023\Chapter17\TemplateMethod\LineCounter\obj\Debug\LineCounter.exe
+C:\Users\infosys\source\repos\oop2023\Chapter17\TemplateMethod\LineCounter\obj\Debug\LineCounter.pdb
+C:\Users\infosys\source\repos\oop2023\Chapter17\TemplateMethod\LineCounter\bin\Debug\TextFileProcessor.dll
+C:\Users\infosys\source\repos\oop2023\Chapter17\TemplateMethod\LineCounter\bin\Debug\TextFileProcessor.pdb
+C:\Users\infosys\source\repos\oop2023\Chapter17\TemplateMethod\LineCounter\obj\Debug\LineCounter.csproj.AssemblyReference.cache
+C:\Users\infosys\source\repos\oop2023\Chapter17\TemplateMethod\LineCounter\obj\Debug\LineCounter.csproj.CopyComplete

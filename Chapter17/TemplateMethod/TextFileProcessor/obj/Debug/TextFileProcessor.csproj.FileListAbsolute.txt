@@ -1,0 +1,6 @@
+C:\Users\infosys\source\repos\oop2023\Chapter17\TemplateMethod\TextFileProcessor\bin\Debug\TextFileProcessor.dll
+C:\Users\infosys\source\repos\oop2023\Chapter17\TemplateMethod\TextFileProcessor\bin\Debug\TextFileProcessor.pdb
+C:\Users\infosys\source\repos\oop2023\Chapter17\TemplateMethod\TextFileProcessor\obj\Debug\TextFileProcessor.csproj.AssemblyReference.cache
+C:\Users\infosys\source\repos\oop2023\Chapter17\TemplateMethod\TextFileProcessor\obj\Debug\TextFileProcessor.csproj.CoreCompileInputs.cache
+C:\Users\infosys\source\repos\oop2023\Chapter17\TemplateMethod\TextFileProcessor\obj\Debug\TextFileProcessor.dll
+C:\Users\infosys\source\repos\oop2023\Chapter17\TemplateMethod\TextFileProcessor\obj\Debug\TextFileProcessor.pdb
