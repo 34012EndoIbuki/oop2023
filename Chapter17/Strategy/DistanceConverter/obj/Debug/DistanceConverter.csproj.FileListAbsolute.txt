@@ -1,0 +1,7 @@
+C:\Users\infosys\source\repos\oop2023\Chapter17\Strategy\DistanceConverter\obj\Debug\DistanceConverter.csproj.AssemblyReference.cache
+C:\Users\infosys\source\repos\oop2023\Chapter17\Strategy\DistanceConverter\obj\Debug\DistanceConverter.csproj.CoreCompileInputs.cache
+C:\Users\infosys\source\repos\oop2023\Chapter17\Strategy\DistanceConverter\bin\Debug\DistanceConverter.exe.config
+C:\Users\infosys\source\repos\oop2023\Chapter17\Strategy\DistanceConverter\bin\Debug\DistanceConverter.exe
+C:\Users\infosys\source\repos\oop2023\Chapter17\Strategy\DistanceConverter\bin\Debug\DistanceConverter.pdb
+C:\Users\infosys\source\repos\oop2023\Chapter17\Strategy\DistanceConverter\obj\Debug\DistanceConverter.exe
+C:\Users\infosys\source\repos\oop2023\Chapter17\Strategy\DistanceConverter\obj\Debug\DistanceConverter.pdb
