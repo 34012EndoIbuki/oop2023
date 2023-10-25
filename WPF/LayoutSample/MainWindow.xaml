@@ -9,11 +9,15 @@
     <DockPanel>
         <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" HorizontalAlignment="Right">
             <Button x:Name="cancelButton" Content="キャンセル" 
-                    Width="75" Margin="5"/>
+                    Width="75" Margin="5" Click="cancelButton_Click"/>
             <Button x:Name="okButton" Content="OK" 
-                    Width="75" Margin="5"/>
+                    Width="75" Margin="5" Click="okButton_Click"/>
         </StackPanel>
-        <StackPanel />
+        <StackPanel >
+            <TextBlock TextWrapping="Wrap" Text="メッセージを入力してください"/>
+            <TextBox x:Name="messageTextBox" Height="23" TextWrapping="Wrap" 
+                     Width="120"/>
+        </StackPanel>
 
     </DockPanel>
 </Window>

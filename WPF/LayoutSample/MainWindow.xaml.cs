@@ -21,5 +21,13 @@ namespace LayoutSample {
         public MainWindow() {
             InitializeComponent();
         }
+
+        private void okButton_Click(object sender, RoutedEventArgs e) {
+            MessageBox.Show(string.Format("入力された文字は{0}です。", messageTextBox.Text));
+        }
+
+        private void cancelButton_Click(object sender, RoutedEventArgs e) {
+            MessageBox.Show("キャンセルされました。");
+        }
     }
 }
