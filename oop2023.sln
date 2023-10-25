@@ -207,6 +207,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LayoutSample", "WPF\LayoutS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GridLayoutSample", "WPF\GridLayoutSample\GridLayoutSample.csproj", "{55B73DCF-1921-4F3D-9F1C-C1900278F089}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleSlider", "WPF\SampleSlider\SampleSlider.csproj", "{89F9F072-A492-4249-875E-05DE03F7860D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -481,6 +483,10 @@ Global
 		{55B73DCF-1921-4F3D-9F1C-C1900278F089}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{55B73DCF-1921-4F3D-9F1C-C1900278F089}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{55B73DCF-1921-4F3D-9F1C-C1900278F089}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89F9F072-A492-4249-875E-05DE03F7860D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89F9F072-A492-4249-875E-05DE03F7860D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89F9F072-A492-4249-875E-05DE03F7860D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89F9F072-A492-4249-875E-05DE03F7860D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -570,6 +576,7 @@ Global
 		{18B3D086-2904-47F8-92FF-F0804B41614B} = {FE93BED3-5635-4CC7-8316-D13F821AB811}
 		{7C37DB35-D7EF-4183-8C08-B79DDF073022} = {FE93BED3-5635-4CC7-8316-D13F821AB811}
 		{55B73DCF-1921-4F3D-9F1C-C1900278F089} = {FE93BED3-5635-4CC7-8316-D13F821AB811}
+		{89F9F072-A492-4249-875E-05DE03F7860D} = {FE93BED3-5635-4CC7-8316-D13F821AB811}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {612E75FA-EA71-4D4F-A972-98EDDEA28886}
