@@ -1,0 +1,15 @@
+C:\Users\infosys\source\repos\oop2023\WPF\ColorChecker\obj\Debug\ColorChecker.csproj.AssemblyReference.cache
+C:\Users\infosys\source\repos\oop2023\WPF\ColorChecker\obj\Debug\App.g.cs
+C:\Users\infosys\source\repos\oop2023\WPF\ColorChecker\obj\Debug\ColorChecker_MarkupCompile.cache
+C:\Users\infosys\source\repos\oop2023\WPF\ColorChecker\bin\Debug\ColorChecker.exe.config
+C:\Users\infosys\source\repos\oop2023\WPF\ColorChecker\bin\Debug\ColorChecker.exe
+C:\Users\infosys\source\repos\oop2023\WPF\ColorChecker\bin\Debug\ColorChecker.pdb
+C:\Users\infosys\source\repos\oop2023\WPF\ColorChecker\obj\Debug\MainWindow.g.cs
+C:\Users\infosys\source\repos\oop2023\WPF\ColorChecker\obj\Debug\ColorChecker_MarkupCompile.lref
+C:\Users\infosys\source\repos\oop2023\WPF\ColorChecker\obj\Debug\MainWindow.baml
+C:\Users\infosys\source\repos\oop2023\WPF\ColorChecker\obj\Debug\ColorChecker.g.resources
+C:\Users\infosys\source\repos\oop2023\WPF\ColorChecker\obj\Debug\ColorChecker.Properties.Resources.resources
+C:\Users\infosys\source\repos\oop2023\WPF\ColorChecker\obj\Debug\ColorChecker.csproj.GenerateResource.cache
+C:\Users\infosys\source\repos\oop2023\WPF\ColorChecker\obj\Debug\ColorChecker.csproj.CoreCompileInputs.cache
+C:\Users\infosys\source\repos\oop2023\WPF\ColorChecker\obj\Debug\ColorChecker.exe
+C:\Users\infosys\source\repos\oop2023\WPF\ColorChecker\obj\Debug\ColorChecker.pdb

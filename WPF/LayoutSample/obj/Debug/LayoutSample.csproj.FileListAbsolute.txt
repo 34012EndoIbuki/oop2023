@@ -1,0 +1,15 @@
+C:\Users\infosys\source\repos\oop2023\WPF\LayoutSample\bin\Debug\LayoutSample.exe.config
+C:\Users\infosys\source\repos\oop2023\WPF\LayoutSample\bin\Debug\LayoutSample.exe
+C:\Users\infosys\source\repos\oop2023\WPF\LayoutSample\bin\Debug\LayoutSample.pdb
+C:\Users\infosys\source\repos\oop2023\WPF\LayoutSample\obj\Debug\LayoutSample.csproj.AssemblyReference.cache
+C:\Users\infosys\source\repos\oop2023\WPF\LayoutSample\obj\Debug\MainWindow.g.cs
+C:\Users\infosys\source\repos\oop2023\WPF\LayoutSample\obj\Debug\App.g.cs
+C:\Users\infosys\source\repos\oop2023\WPF\LayoutSample\obj\Debug\LayoutSample_MarkupCompile.cache
+C:\Users\infosys\source\repos\oop2023\WPF\LayoutSample\obj\Debug\LayoutSample_MarkupCompile.lref
+C:\Users\infosys\source\repos\oop2023\WPF\LayoutSample\obj\Debug\MainWindow.baml
+C:\Users\infosys\source\repos\oop2023\WPF\LayoutSample\obj\Debug\LayoutSample.g.resources
+C:\Users\infosys\source\repos\oop2023\WPF\LayoutSample\obj\Debug\LayoutSample.Properties.Resources.resources
+C:\Users\infosys\source\repos\oop2023\WPF\LayoutSample\obj\Debug\LayoutSample.csproj.GenerateResource.cache
+C:\Users\infosys\source\repos\oop2023\WPF\LayoutSample\obj\Debug\LayoutSample.csproj.CoreCompileInputs.cache
+C:\Users\infosys\source\repos\oop2023\WPF\LayoutSample\obj\Debug\LayoutSample.exe
+C:\Users\infosys\source\repos\oop2023\WPF\LayoutSample\obj\Debug\LayoutSample.pdb
