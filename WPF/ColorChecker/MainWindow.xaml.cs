@@ -19,9 +19,14 @@ namespace ColorChecker {
     /// MainWindow.xaml の相互作用ロジック
     /// </summary>
     public partial class MainWindow : Window {
+
+        
+
         public MainWindow() {
             InitializeComponent();
             DataContext = GetColorList();
+            
+
         }
 
         private void Slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e) {
@@ -31,6 +36,10 @@ namespace ColorChecker {
             /*string rgb = "#" + Convert.ToString((int)rSlider.Value, 16) +
                 Convert.ToString((int)gSlider.Value, 16) +
                 Convert.ToString((int)bSlider.Value, 16);*/
+
+
+            /*colorArea.Background = new SolidColorBrush(Color.FromRgb(savergb.R, savergb.G, savergb.B));
+*/
             byte r = (byte)(int)rSlider.Value;
             byte g = (byte)(int)gSlider.Value;
             byte b = (byte)(int)bSlider.Value;
@@ -59,5 +68,31 @@ namespace ColorChecker {
             greenText.Text = color.G.ToString();
             blueText.Text = color.B.ToString();*/
         }
+
+        private void stockButton_Click(object sender, RoutedEventArgs e) {
+            /*string rInfo = rSlider.Value.ToString();
+            string gInfo = gSlider.Value.ToString();
+            string bInfo = bSlider.Value.ToString();*/
+            /*string rgbInfo = "R:"+ rInfo + "G:" + gInfo + "B:" + bInfo;*/
+
+            RGB savergb = new RGB();
+            savergb.R = (byte)(int)rSlider.Value;
+            savergb.G = (byte)(int)gSlider.Value;
+            savergb.B = (byte)(int)bSlider.Value;
+
+            var list = new List<byte>();
+            list.Add(savergb.R);    //0+2...
+            list.Add(savergb.G);    //1+2...
+            list.Add(savergb.B);    //2+2...
+
+            stockList.Items.Add("R:" + savergb.R + "G:" + savergb.G + "B:" + savergb.B);
+        }
+
+        private void stockList_MouseDoubleClick(object sender, MouseButtonEventArgs e) {
+            RGB save = (RGB)stockList.SelectedItem;
+            
+
+        }
+
     }
 }
