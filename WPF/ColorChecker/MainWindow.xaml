@@ -12,7 +12,7 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Label x:Name="colorArea" Margin="10,10,10,10" Background=""/>
+        <Label x:Name="colorArea" Margin="10,10,10,10"/>
         <Grid Grid.Column="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
@@ -25,18 +25,42 @@
                 <ColumnDefinition Width="3*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Slider Grid.Column="1" Grid.Row="0" x:Name="rSlider" VerticalAlignment="Center" Maximum="255" TickPlacement="TopLeft" TickFrequency="64" ValueChanged="rSlider_ValueChanged"/>
+            <Slider Grid.Column="1" Grid.Row="0" x:Name="rSlider" VerticalAlignment="Center" Maximum="255" TickPlacement="TopLeft" TickFrequency="64" ValueChanged="Slider_ValueChanged"/>
             <TextBlock Grid.Row="0" Text="R" x:Name="redText" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             <TextBox Grid.Column="2" Grid.Row="0" TextWrapping="Wrap" Text="{Binding ElementName=rSlider,Path=Value,UpdateSourceTrigger=PropertyChanged,StringFormat={}{0:0}}" VerticalAlignment="Bottom"/>
+            
             <Slider Grid.Column="1" Grid.Row="1" x:Name="gSlider" VerticalAlignment="Center" Maximum="255" TickPlacement="TopLeft" TickFrequency="64" ValueChanged="Slider_ValueChanged"/>
             <TextBlock Grid.Row="1" Text="G" x:Name="greenText" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             <TextBox Grid.Column="2" Grid.Row="1" TextWrapping="Wrap" Text="{Binding ElementName=gSlider,Path=Value,UpdateSourceTrigger=PropertyChanged,StringFormat={}{0:0}}" VerticalAlignment="Bottom"/>
+            
             <Slider Grid.Column="1" Grid.Row="2" x:Name="bSlider" VerticalAlignment="Center" Maximum="255" TickPlacement="TopLeft" TickFrequency="64" ValueChanged="Slider_ValueChanged"/>
             <TextBlock Grid.Row="2" Text="B" x:Name="blueText" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             <TextBox Grid.Column="2" Grid.Row="2" TextWrapping="Wrap" Text="{Binding ElementName=bSlider,Path=Value,UpdateSourceTrigger=PropertyChanged,StringFormat={}{0:0}}" VerticalAlignment="Bottom"/>
-            <ComboBox x:Name="colorConboBox" Grid.Column="1" Grid.Row="3" VerticalAlignment="Center" />
+
+            <ComboBox x:Name="colorConboBox" Grid.Column="1" Grid.Row="3" VerticalAlignment="Center" SelectionChanged="colorConboBox_SelectionChanged" 
+                      ItemsSource="{Binding}" SelectedValue="{Binding Color}">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <Border Width="20" Height="Auto" Margin="5,0" BorderThickness="1" BorderBrush="Black"  >
+                                <Border.Background>
+                                    <SolidColorBrush Color="{Binding Color}"/>
+                                </Border.Background>
+                            </Border>
+                            <TextBlock Text="{Binding Name}"></TextBlock>
+                        </StackPanel>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
         </Grid>
-        <Grid Grid.Column="2"/>
+        <Grid Grid.Column="2">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="5*"/>
+            </Grid.RowDefinitions>
+            <Button x:Name="stockButton" Content="stock" Grid.Row="0" Margin="10"/>
+            <ListBox x:Name="stockList" Grid.Row="1" Margin="10"/>
+        </Grid>
 
     </Grid>
 </Window>
