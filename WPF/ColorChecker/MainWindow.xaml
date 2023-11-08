@@ -27,15 +27,15 @@
             </Grid.ColumnDefinitions>
             <Slider Grid.Column="1" Grid.Row="0" x:Name="rSlider" VerticalAlignment="Center" Maximum="255" TickPlacement="TopLeft" TickFrequency="64" ValueChanged="Slider_ValueChanged"/>
             <TextBlock Grid.Row="0" Text="R" x:Name="redText" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            <TextBox Grid.Column="2" Grid.Row="0" TextWrapping="Wrap" Text="{Binding ElementName=rSlider,Path=Value,UpdateSourceTrigger=PropertyChanged,StringFormat={}{0:0}}" VerticalAlignment="Bottom"/>
+            <TextBox x:Name="rValue" Grid.Column="2" Grid.Row="0" TextWrapping="Wrap" Text="{Binding ElementName=rSlider,Path=Value,UpdateSourceTrigger=PropertyChanged,StringFormat={}{0:0}}" VerticalAlignment="Bottom"/>
             
             <Slider Grid.Column="1" Grid.Row="1" x:Name="gSlider" VerticalAlignment="Center" Maximum="255" TickPlacement="TopLeft" TickFrequency="64" ValueChanged="Slider_ValueChanged"/>
             <TextBlock Grid.Row="1" Text="G" x:Name="greenText" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            <TextBox Grid.Column="2" Grid.Row="1" TextWrapping="Wrap" Text="{Binding ElementName=gSlider,Path=Value,UpdateSourceTrigger=PropertyChanged,StringFormat={}{0:0}}" VerticalAlignment="Bottom"/>
+            <TextBox x:Name="gValue" Grid.Column="2" Grid.Row="1" TextWrapping="Wrap" Text="{Binding ElementName=gSlider,Path=Value,UpdateSourceTrigger=PropertyChanged,StringFormat={}{0:0}}" Margin="0,43,0,0"/>
             
             <Slider Grid.Column="1" Grid.Row="2" x:Name="bSlider" VerticalAlignment="Center" Maximum="255" TickPlacement="TopLeft" TickFrequency="64" ValueChanged="Slider_ValueChanged"/>
             <TextBlock Grid.Row="2" Text="B" x:Name="blueText" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            <TextBox Grid.Column="2" Grid.Row="2" TextWrapping="Wrap" Text="{Binding ElementName=bSlider,Path=Value,UpdateSourceTrigger=PropertyChanged,StringFormat={}{0:0}}" VerticalAlignment="Bottom"/>
+            <TextBox x:Name="bValue" Grid.Column="2" Grid.Row="2" TextWrapping="Wrap" Text="{Binding ElementName=bSlider,Path=Value,UpdateSourceTrigger=PropertyChanged,StringFormat={}{0:0}}" VerticalAlignment="Bottom"/>
 
             <ComboBox x:Name="colorConboBox" Grid.Column="1" Grid.Row="3" VerticalAlignment="Center" SelectionChanged="colorConboBox_SelectionChanged" 
                       ItemsSource="{Binding}" SelectedValue="{Binding Color}">

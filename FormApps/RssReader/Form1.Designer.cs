@@ -164,7 +164,6 @@ namespace RssReader {
         private System.Windows.Forms.WebBrowser wbBrowser;
         private System.Windows.Forms.Button btAdd;
         private System.Windows.Forms.DataGridView dgvUrl;
-        private System.Windows.Forms.StatusStrip statasLabelDisp;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripStatusLabel tsInfoText;
         private System.Windows.Forms.StatusStrip statusStrip1;

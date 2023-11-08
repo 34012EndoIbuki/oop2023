@@ -20,12 +20,11 @@ namespace ColorChecker {
     /// </summary>
     public partial class MainWindow : Window {
 
-        
+        List<string> rgblist = new List<string>();
 
         public MainWindow() {
             InitializeComponent();
             DataContext = GetColorList();
-            
 
         }
 
@@ -80,17 +79,27 @@ namespace ColorChecker {
             savergb.G = (byte)(int)gSlider.Value;
             savergb.B = (byte)(int)bSlider.Value;
 
-            var list = new List<byte>();
-            list.Add(savergb.R);    //0+2...
-            list.Add(savergb.G);    //1+2...
-            list.Add(savergb.B);    //2+2...
+            /*List<byte> rgblist = new List<byte>();*/
+            rgblist.Add(rValue.Text);    //0+2...
+            rgblist.Add(gValue.Text);    //1+2...
+            rgblist.Add(bValue.Text);    //2+2...
 
             stockList.Items.Add("R:" + savergb.R + "G:" + savergb.G + "B:" + savergb.B);
         }
 
         private void stockList_MouseDoubleClick(object sender, MouseButtonEventArgs e) {
-            RGB save = (RGB)stockList.SelectedItem;
-            
+            //RGB savergb = (RGB)stockList.SelectedItem;
+
+            var number = stockList.SelectedIndex;
+            var rnum = number * 3;
+            var gnum = number * 3 + 1;
+            var bnum = number * 3 + 2;
+
+            rValue.Text = rgblist[rnum];
+            gValue.Text = rgblist[gnum];
+            bValue.Text = rgblist[bnum];
+
+            //012 345 678
 
         }
 
