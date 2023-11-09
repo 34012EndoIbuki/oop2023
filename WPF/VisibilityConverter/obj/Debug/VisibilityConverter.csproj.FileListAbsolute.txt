@@ -1,0 +1,15 @@
+C:\Users\infosys\source\repos\oop2023\WPF\VisibilityConverter\bin\Debug\VisibilityConverter.exe.config
+C:\Users\infosys\source\repos\oop2023\WPF\VisibilityConverter\bin\Debug\VisibilityConverter.exe
+C:\Users\infosys\source\repos\oop2023\WPF\VisibilityConverter\bin\Debug\VisibilityConverter.pdb
+C:\Users\infosys\source\repos\oop2023\WPF\VisibilityConverter\obj\Debug\VisibilityConverter.csproj.AssemblyReference.cache
+C:\Users\infosys\source\repos\oop2023\WPF\VisibilityConverter\obj\Debug\MainWindow.g.cs
+C:\Users\infosys\source\repos\oop2023\WPF\VisibilityConverter\obj\Debug\App.g.cs
+C:\Users\infosys\source\repos\oop2023\WPF\VisibilityConverter\obj\Debug\VisibilityConverter_MarkupCompile.cache
+C:\Users\infosys\source\repos\oop2023\WPF\VisibilityConverter\obj\Debug\VisibilityConverter_MarkupCompile.lref
+C:\Users\infosys\source\repos\oop2023\WPF\VisibilityConverter\obj\Debug\MainWindow.baml
+C:\Users\infosys\source\repos\oop2023\WPF\VisibilityConverter\obj\Debug\VisibilityConverter.g.resources
+C:\Users\infosys\source\repos\oop2023\WPF\VisibilityConverter\obj\Debug\VisibilityConverter.Properties.Resources.resources
+C:\Users\infosys\source\repos\oop2023\WPF\VisibilityConverter\obj\Debug\VisibilityConverter.csproj.GenerateResource.cache
+C:\Users\infosys\source\repos\oop2023\WPF\VisibilityConverter\obj\Debug\VisibilityConverter.csproj.CoreCompileInputs.cache
+C:\Users\infosys\source\repos\oop2023\WPF\VisibilityConverter\obj\Debug\VisibilityConverter.exe
+C:\Users\infosys\source\repos\oop2023\WPF\VisibilityConverter\obj\Debug\VisibilityConverter.pdb

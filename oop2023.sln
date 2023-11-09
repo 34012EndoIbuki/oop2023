@@ -215,6 +215,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleUnitConverter", "WPF\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleUnitConverter2", "WPF\SampleUnitConverter2\SampleUnitConverter2.csproj", "{25820308-7DED-4EB3-9F65-AB37ADEEA936}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisibilityConverter", "WPF\VisibilityConverter\VisibilityConverter.csproj", "{1BFC8CC3-BE13-4287-AAE9-6B54EEB29123}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -505,6 +507,10 @@ Global
 		{25820308-7DED-4EB3-9F65-AB37ADEEA936}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{25820308-7DED-4EB3-9F65-AB37ADEEA936}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{25820308-7DED-4EB3-9F65-AB37ADEEA936}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BFC8CC3-BE13-4287-AAE9-6B54EEB29123}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BFC8CC3-BE13-4287-AAE9-6B54EEB29123}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BFC8CC3-BE13-4287-AAE9-6B54EEB29123}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BFC8CC3-BE13-4287-AAE9-6B54EEB29123}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -598,6 +604,7 @@ Global
 		{CBB913AC-70F9-47A6-B9B3-A17CA6AEB83A} = {FE93BED3-5635-4CC7-8316-D13F821AB811}
 		{E93C78FE-9142-492A-8418-414BD86C4504} = {FE93BED3-5635-4CC7-8316-D13F821AB811}
 		{25820308-7DED-4EB3-9F65-AB37ADEEA936} = {FE93BED3-5635-4CC7-8316-D13F821AB811}
+		{1BFC8CC3-BE13-4287-AAE9-6B54EEB29123} = {FE93BED3-5635-4CC7-8316-D13F821AB811}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {612E75FA-EA71-4D4F-A972-98EDDEA28886}
