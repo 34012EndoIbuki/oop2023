@@ -13,3 +13,6 @@ C:\Users\infosys\source\repos\oop2023\WPF\VisibilityConverter\obj\Debug\Visibili
 C:\Users\infosys\source\repos\oop2023\WPF\VisibilityConverter\obj\Debug\VisibilityConverter.csproj.CoreCompileInputs.cache
 C:\Users\infosys\source\repos\oop2023\WPF\VisibilityConverter\obj\Debug\VisibilityConverter.exe
 C:\Users\infosys\source\repos\oop2023\WPF\VisibilityConverter\obj\Debug\VisibilityConverter.pdb
+C:\Users\infosys\source\repos\oop2023\WPF\VisibilityConverter\obj\Debug\Resources.baml
+C:\Users\infosys\source\repos\oop2023\WPF\VisibilityConverter\obj\Debug\App.baml
+C:\Users\infosys\source\repos\oop2023\WPF\VisibilityConverter\obj\Debug\GeneratedInternalTypeHelper.g.cs

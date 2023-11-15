@@ -34,6 +34,7 @@ namespace RssReader {
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.tbName = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUrl)).BeginInit();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -41,14 +42,14 @@ namespace RssReader {
             // tbUrl
             // 
             this.tbUrl.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.tbUrl.Location = new System.Drawing.Point(13, 13);
+            this.tbUrl.Location = new System.Drawing.Point(13, 24);
             this.tbUrl.Name = "tbUrl";
             this.tbUrl.Size = new System.Drawing.Size(599, 31);
             this.tbUrl.TabIndex = 0;
             // 
             // btGet
             // 
-            this.btGet.Location = new System.Drawing.Point(618, 13);
+            this.btGet.Location = new System.Drawing.Point(618, 24);
             this.btGet.Name = "btGet";
             this.btGet.Size = new System.Drawing.Size(75, 31);
             this.btGet.TabIndex = 1;
@@ -63,9 +64,9 @@ namespace RssReader {
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbRssTitle.FormattingEnabled = true;
             this.lbRssTitle.ItemHeight = 12;
-            this.lbRssTitle.Location = new System.Drawing.Point(13, 61);
+            this.lbRssTitle.Location = new System.Drawing.Point(13, 109);
             this.lbRssTitle.Name = "lbRssTitle";
-            this.lbRssTitle.Size = new System.Drawing.Size(376, 292);
+            this.lbRssTitle.Size = new System.Drawing.Size(280, 244);
             this.lbRssTitle.TabIndex = 2;
             this.lbRssTitle.Click += new System.EventHandler(this.lbRssTitle_Click);
             // 
@@ -83,7 +84,7 @@ namespace RssReader {
             // 
             // btAdd
             // 
-            this.btAdd.Location = new System.Drawing.Point(700, 13);
+            this.btAdd.Location = new System.Drawing.Point(700, 24);
             this.btAdd.Name = "btAdd";
             this.btAdd.Size = new System.Drawing.Size(75, 31);
             this.btAdd.TabIndex = 4;
@@ -95,12 +96,13 @@ namespace RssReader {
             // 
             this.dgvUrl.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUrl.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dgvUrl.Location = new System.Drawing.Point(405, 61);
+            this.dgvUrl.Location = new System.Drawing.Point(299, 62);
             this.dgvUrl.Name = "dgvUrl";
             this.dgvUrl.RowTemplate.Height = 21;
-            this.dgvUrl.Size = new System.Drawing.Size(370, 292);
+            this.dgvUrl.Size = new System.Drawing.Size(476, 291);
             this.dgvUrl.TabIndex = 5;
-            this.dgvUrl.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUrl_CellClick);
+            this.dgvUrl.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUrl_CellContentClick);
+            this.dgvUrl.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUrl_CellDoubleClick);
             // 
             // tsInfoText
             // 
@@ -132,11 +134,21 @@ namespace RssReader {
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(118, 17);
             this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
             // 
+            // tbName
+            // 
+            this.tbName.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.tbName.Location = new System.Drawing.Point(13, 62);
+            this.tbName.Multiline = true;
+            this.tbName.Name = "tbName";
+            this.tbName.Size = new System.Drawing.Size(280, 35);
+            this.tbName.TabIndex = 9;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 619);
+            this.Controls.Add(this.tbName);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.dgvUrl);
@@ -168,6 +180,7 @@ namespace RssReader {
         private System.Windows.Forms.ToolStripStatusLabel tsInfoText;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.TextBox tbName;
     }
 }
 

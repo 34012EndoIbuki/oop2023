@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Linq;
@@ -11,14 +12,32 @@ namespace RssReader {
     public partial class Form1 : Form {
         //取得データ保存用
         List<ItemData> ItemDatas = new List<ItemData>();    //二つのデータを持つ
+        BindingList<ItemData> bdl = new BindingList<ItemData>();
+        //BindingList<urldb> bdl2 = new BindingList<urldb>();
+        List<string> CheckURL = new List<string>();
+        List<string> CheckName = new List<string>();
 
         public Form1() {
             InitializeComponent();
+            dgvUrl.DataSource = bdl;
+            //dgvUrl.DataSource = bdl2;
             
+
         }
 
         private void Form1_Load(object sender, EventArgs e) {
             tsInfoText.Text = "";   //情報表示領域のテキストを初期化
+            bdl.Add(new ItemData { Title = "IT", Link = "https://news.yahoo.co.jp/rss/categories/it.xml"});
+            bdl.Add(new ItemData { Title = "Anime", Link = "https://news.yahoo.co.jp/rss/media/animage/all.xml" });
+            bdl.Add(new ItemData { Title = "Otaku", Link = "https://news.yahoo.co.jp/rss/media/otakulab/all.xml" });
+            CheckURL.Add("https://news.yahoo.co.jp/rss/categories/it.xml");
+            CheckURL.Add("https://news.yahoo.co.jp/rss/media/animage/all.xml");
+            CheckURL.Add("https://news.yahoo.co.jp/rss/media/otakulab/all.xml");
+            CheckName.Add("IT");
+            CheckName.Add("Anime");
+            CheckName.Add("Otaku");
+            //dgvUrl.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dgvUrl.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
         }
 
         private void btGet_Click(object sender, EventArgs e) {
@@ -87,20 +106,47 @@ namespace RssReader {
             //DataGridViewLinkColumnの作成
 
             statasLabelDisp();
-            if (tbUrl == null) {
-                statasLabelDisp("urlを入力してください");    //tsInfoText.Text = "記録者を入力してください";
+            if (tbUrl.Text == "") {
+                MessageBox.Show("urlを入力してください");    //tsInfoText.Text = "記録者を入力してください";
                 return;
             }
 
+            if ((tbName.Text == "")) {
+                MessageBox.Show("名前が未入力です");
+                return;
+            }
 
+            if (dgvUrl.Columns.Contains(tbUrl.Text)) {
+                Console.WriteLine("入力されたURLすでに存在します");
+            }
 
-            DataTable table = new DataTable("Table");
-            table.Rows.Add("髪");
-            dgvUrl.DataSource = table;
+            foreach(var str in CheckURL) {
+                if(str == tbUrl.Text) {
+                    MessageBox.Show("入力されたURLはすでに存在します");
+                    return;
+                }
+            }
 
+            foreach (var str in CheckName) {
+                if (str == tbName.Text) {
+                    MessageBox.Show("入力された名前はすでに存在します");
+                    return;
+                }
+            }
 
+            CheckURL.Add(tbUrl.Text);
+            CheckName.Add(tbName.Text);
+            
+
+            ItemData link = new ItemData();
+            link.Title = tbName.Text;
+            link.Link = tbUrl.Text;
+            bdl.Add(link);
+            dgvUrl.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dgvUrl.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+
+            /*//DataGridViewLinkColumnの作成
             DataGridViewLinkColumn column = new DataGridViewLinkColumn();
-
             //列の名前を設定
             column.Name = "Link";
             //全てのリンクに"詳細閲覧"と表示する
@@ -112,23 +158,41 @@ namespace RssReader {
             //デフォルトでTrue
             column.TrackVisitedState = true;
             //DataGridViewに追加する
-            dgvUrl.Columns.Add(column);
+            //dgvUrl.Columns.Add(column);
+
+            urldb link = new urldb();
+            link.Title = "c1";
+            link.Link = column;
+            bdl2.Add(link);*/
+
         }
 
-        
+        private void dgvUrl_CellContentClick(object sender, DataGridViewCellEventArgs e) {
+            tbUrl.Text = dgvUrl.CurrentRow.Cells[1].Value.ToString();
+            tbName.Text = dgvUrl.CurrentRow.Cells[0].Value.ToString();
+        }
 
-        private void dgvUrl_CellClick(object sender, DataGridViewCellEventArgs e) {
-            DataGridView dgv = (DataGridView)sender;
-            //"Link"列ボタンクリック
-            if (dgv.Columns[e.ColumnIndex].Name == "Link") {
-                MessageBox.Show(e.RowIndex.ToString() +
-                "行リンククリック。");
-                //訪問済み
-                DataGridViewLinkCell cell =
-                (DataGridViewLinkCell)dgv[e.ColumnIndex, e.RowIndex];
-                cell.LinkVisited = true;
+        private void dgvUrl_CellDoubleClick(object sender, DataGridViewCellEventArgs e) {
+            tbUrl.Text = dgvUrl.CurrentRow.Cells[1].Value.ToString();
+            tbName.Text = dgvUrl.CurrentRow.Cells[0].Value.ToString();
+
+            lbRssTitle.Items.Clear();   //リストボックスクリア
+
+            using (var wc = new WebClient()) {
+                var url = wc.OpenRead(tbUrl.Text);
+                XDocument xdoc = XDocument.Load(url);   //Xmlデータ取得
+                ItemDatas = xdoc.Root.Descendants("item")
+                    .Select(x => new ItemData {
+                        Title = (string)x.Element("title"),     //titleとlinkを取得
+                        Link = (string)x.Element("link")
+                    }).ToList();  //型がstringで認識されていないので(string)でstring型に明示的にキャストする
+                foreach (var title in ItemDatas) {
+                    //title.ReplaceAll("title", " ");
+                    //lbRssTitle.Items.Add(title.Value);]
+                    lbRssTitle.Items.Add(title.Title);
+                }
+
             }
         }
-
     }
 }

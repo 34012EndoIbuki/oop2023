@@ -5,9 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VisibilityConverter"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="300" Width="300">
     <Window.Resources>
-        <SolidColorBrush x:Key="ButtonBrushKey" Color="Purple"></SolidColorBrush>
+        <DataTemplate DataType="{x:Type local:ColorViewModel}">
+            <StackPanel Orientation="Horizontal">
+                <Rectangle Width="12" Height="12">
+                    <Rectangle.Fill>
+                        <SolidColorBrush Color="{Binding Color}"/>
+                    </Rectangle.Fill>
+                </Rectangle>
+                <TextBlock Margin="2" Text="{Binding Name}"/>
+            </StackPanel>
+        </DataTemplate>
+        <!--><SolidColorBrush x:Key="ButtonBrushKey" Color="Purple"></SolidColorBrush>
+        <SolidColorBrush x:Key="ButtonBrushKey" Color="Purple"></SolidColorBrush>-->
     </Window.Resources>
     <StackPanel>
         <StackPanel.Resources>
@@ -28,5 +39,6 @@
         <Button Margin="10" Content="ボタン1" Background="{DynamicResource ButtonBrushKey}"/>
         <Button Margin="10" Content="ボタン2" Background="{StaticResource ButtonBrushKey}"/>
         <Button Margin="10" Content="リソース変更" Click="Button_Click" />
+        <ComboBox ItemsSource="{x:Static local:ColorViewModel.ColorList}"/>
     </StackPanel>
 </Window>
